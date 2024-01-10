@@ -1,7 +1,10 @@
+import Navbar from '../Navbar'
+import './Home.css'
+
 const Home = () => {
   return (
-    <section>
-      {' '}
+    <section className='home-page'>
+      <Navbar />
       Home Headphones Speakers Earphones New product XX99 Mark II Headphones
       Experience natural, lifelike audio and exceptional build quality made for
       the passionate music enthusiast. See product Headphones Shop Speakers Shop
