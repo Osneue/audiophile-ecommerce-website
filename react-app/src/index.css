@@ -30,3 +30,8 @@ img {
   max-width: 100%;
   display: block;
 }
+
+h2,
+p {
+  text-align: center;
+}

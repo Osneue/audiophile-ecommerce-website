@@ -1,0 +1,219 @@
+.recommendation {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.top-recommendation {
+  border-radius: 0.5em;
+  background-color: #d87d4a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3.44em 1.5em;
+  background-image: url(./assets/home/desktop/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* background-position: 50% 100%; */
+  margin-bottom: 2em;
+}
+
+.top-recommendation h2 {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.03571em; /* 103.571% */
+  text-transform: uppercase;
+  margin-bottom: 0.43em;
+}
+
+.top-recommendation p {
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.66em;
+  margin-bottom: 1.5em;
+  opacity: 0.75;
+}
+
+.top-recommendation button {
+  background-color: black;
+  border: 0;
+  padding: 1em 2em;
+
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.077em;
+  text-transform: uppercase;
+}
+
+.top-recommendation button:hover,
+.top-recommendation button:focus {
+  background-color: #4c4c4c;
+  cursor: pointer;
+}
+
+.top-recommendation-circle {
+  width: 100%;
+  height: 12.93rem;
+  background-image: url(./assets/home/desktop/pattern-circles.svg);
+  background-size: 100%;
+}
+
+.top-recommendation-photo {
+  width: 10.75rem;
+  height: 12.93rem;
+  background-image: url(./assets/home/mobile/image-speaker-zx9.png);
+  background-size: cover;
+  margin-bottom: 2em;
+}
+
+.top-recommendation-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle-recommendation {
+  padding: 6em 0;
+  padding-left: 1.5em;
+  border-radius: 0.5em;
+  background-image: url(./assets/figma/home/mobile/001.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  margin-bottom: 2em;
+}
+
+.middle-recommendation h2 {
+  text-align: left;
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.14em;
+}
+
+.middle-recommendation button,
+.bottom-recommendation button {
+  background: none;
+  border: 1px solid black;
+  padding: 1em 2em;
+
+  color: black;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.077em;
+  text-transform: uppercase;
+}
+
+.middle-recommendation button:hover,
+.middle-recommendation button:focus,
+.bottom-recommendation button:hover,
+.bottom-recommendation button:focus {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.bottom-recommendation-photo {
+  padding: 6.25em 0;
+  background-image: url(./assets/figma/home/mobile/002.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.5em;
+  margin-bottom: 2em;
+}
+
+.bottom-recommendation-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background-color: #f1f1f1;
+  gap: 2em;
+  padding: 2.875em 0;
+  border-radius: 0.5em;
+  padding-left: 1.5em;
+}
+
+@media (min-width: 600px) {
+  .top-recommendation {
+    padding-bottom: 4em;
+  }
+
+  .top-recommendation-photo {
+    margin-bottom: 4em;
+    width: 12em;
+    height: 14.8em;
+    background-image: url(./assets/home/tablet/image-speaker-zx9.png);
+  }
+
+  .top-recommendation-info {
+    width: 54%;
+  }
+
+  .top-recommendation-info p {
+    margin-bottom: 2.5em;
+  }
+
+  .middle-recommendation {
+    padding: 6.875em 0;
+    padding-left: 3.875em;
+    background-image: url(./assets/figma/home/tablet/001.png);
+  }
+
+  .bottom-recommendation {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(./assets/figma/home/table/002.png);
+  }
+
+  .bottom-recommendation-photo {
+    width: 49%;
+    margin-bottom: 0;
+    background-position: center;
+  }
+
+  .bottom-recommendation-info {
+    width: 49%;
+    align-items: center;
+    padding: 5.625em 0;
+  }
+}
+
+@media (min-width: 850px) {
+  .recommendation {
+    width: 77.5%;
+    margin: 0 auto;
+  }
+
+  .top-recommendation {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .top-recommendation-photo {
+    background-image: url(./assets/home/desktop/image-speaker-zx9.png);
+    align-self: flex-end;
+    margin-bottom: 0;
+    width: 37%;
+    height: 493px;
+    position: relative;
+    bottom: -65px;
+    background-size: 100% 100%;
+  }
+
+  .top-recommendation-info {
+    width: 32%;
+  }
+
+  .middle-recommendation {
+    padding: 8.6em 0;
+    padding-left: 5.9em;
+  }
+
+  .bottom-recommendation-info {
+    padding: 6.6em 0;
+  }
+}
