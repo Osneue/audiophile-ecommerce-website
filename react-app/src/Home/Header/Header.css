@@ -47,7 +47,7 @@ header p {
 }
 
 header button {
-  background: #d87d4a;
+  background-color: #d87d4a;
   border: 0;
   padding: 1em 2em;
 
@@ -56,6 +56,12 @@ header button {
   font-weight: 700;
   letter-spacing: 0.077em;
   text-transform: uppercase;
+}
+
+header button:hover,
+header button:focus {
+  background-color: #fbaf85;
+  cursor: pointer;
 }
 
 @media (min-width: 600px) {
