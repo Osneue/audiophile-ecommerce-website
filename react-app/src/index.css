@@ -25,3 +25,8 @@ body {
   font-size: 16px;
   font-weight: 400;
 }
+
+img {
+  max-width: 100%;
+  display: block;
+}
