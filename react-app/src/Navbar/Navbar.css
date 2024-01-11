@@ -41,4 +41,15 @@ nav ul {
     font-weight: 700;
     text-transform: uppercase;
   }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    cursor: pointer;
+    color: #d87d4a;
+  }
 }
