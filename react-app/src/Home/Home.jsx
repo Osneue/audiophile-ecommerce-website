@@ -1,3 +1,4 @@
+import Advertisement from './Advertisement'
 import CategoryShopNav from './CategoryShopNav'
 import Header from './Header'
 import './Home.css'
@@ -9,6 +10,7 @@ const Home = () => {
       <Header />
       <CategoryShopNav />
       <Recommendation />
+      <Advertisement />
     </section>
   )
 }

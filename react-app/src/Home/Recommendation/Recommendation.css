@@ -116,6 +116,10 @@
   cursor: pointer;
 }
 
+.bottom-recommendation {
+  margin-bottom: 4em;
+}
+
 .bottom-recommendation-photo {
   padding: 6.25em 0;
   background-image: url(./assets/figma/home/mobile/002.png);
