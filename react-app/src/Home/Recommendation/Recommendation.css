@@ -13,8 +13,8 @@
   padding: 3.44em 1.5em;
   background-image: url(./assets/home/desktop/pattern-circles.svg);
   background-repeat: no-repeat;
-  background-size: 100%;
-  /* background-position: 50% 100%; */
+  background-size: 40em;
+  background-position: center top -10em;
   margin-bottom: 2em;
 }
 
@@ -140,6 +140,8 @@
 @media (min-width: 600px) {
   .top-recommendation {
     padding-bottom: 4em;
+    background-size: 50em;
+    background-position: center top -14em;
   }
 
   .top-recommendation-photo {
@@ -191,17 +193,16 @@
   .top-recommendation {
     flex-direction: row;
     justify-content: space-evenly;
+    background-size: 85%;
+    background-position: left -9em top -3em;
   }
 
   .top-recommendation-photo {
     background-image: url(./assets/home/desktop/image-speaker-zx9.png);
-    align-self: flex-end;
     margin-bottom: 0;
     width: 37%;
-    height: 493px;
-    position: relative;
-    bottom: -65px;
-    background-size: 100% 100%;
+    padding: 22% 0;
+    background-image: cover;
   }
 
   .top-recommendation-info {
@@ -215,5 +216,13 @@
 
   .bottom-recommendation-info {
     padding: 6.6em 0;
+  }
+}
+
+@media (min-width: 1100px) {
+  .top-recommendation-photo {
+    background-image: cover;
+    position: relative;
+    bottom: -4em;
   }
 }
