@@ -1,3 +1,4 @@
+import Footer from '../Footer'
 import Advertisement from './Advertisement'
 import CategoryShopNav from './CategoryShopNav'
 import Header from './Header'
@@ -11,6 +12,7 @@ const Home = () => {
       <CategoryShopNav />
       <Recommendation />
       <Advertisement />
+      <Footer />
     </section>
   )
 }
