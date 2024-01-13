@@ -1,4 +1,4 @@
-import Button from '../../utils/Button'
+import Button from '../../UtilComponents/Button'
 import './Recommendation.css'
 
 const TopRecommendation = () => {

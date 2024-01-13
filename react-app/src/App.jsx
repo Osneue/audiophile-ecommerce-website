@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Category from './Category'
 import Checkout from './Checkout'
 import Home from './Home'
 

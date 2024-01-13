@@ -1,3 +1,4 @@
+import { IconArrowRight } from '../../UtilComponents/SvgComponents'
 import './CategoryShopNav.css'
 
 const CategoryShopNavItem = ({ name, photo }) => {
@@ -8,8 +9,8 @@ const CategoryShopNavItem = ({ name, photo }) => {
       </div>
       <h3>{name}</h3>
       <div className='category-shop-nav-link'>
-        <span>SHOP</span>
-        <img src='./assets/shared/desktop/icon-arrow-right.svg' alt='arrow' />
+        <p>SHOP</p>
+        <IconArrowRight style={{ transform: 'translateY(2px)' }} />
       </div>
     </div>
   )
