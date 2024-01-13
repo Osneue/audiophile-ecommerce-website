@@ -19,6 +19,11 @@
 .category-shop-nav:focus {
   cursor: pointer;
 }
+.category-shop-nav:hover p,
+.category-shop-nav:focus p {
+  color: #d87d4a;
+  opacity: 1;
+}
 
 .category-shop-nav h3 {
   font-size: 0.9375rem;
