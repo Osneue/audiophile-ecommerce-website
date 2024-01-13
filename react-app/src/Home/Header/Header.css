@@ -46,24 +46,6 @@ header p {
   margin-bottom: 1.86em;
 }
 
-header button {
-  background-color: #d87d4a;
-  border: 0;
-  padding: 1em 2em;
-
-  color: #fff;
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.077em;
-  text-transform: uppercase;
-}
-
-header button:hover,
-header button:focus {
-  background-color: #fbaf85;
-  cursor: pointer;
-}
-
 @media (min-width: 600px) {
   header {
     background-image: url(./assets/home/tablet/image-header.jpg);

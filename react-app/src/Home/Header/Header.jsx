@@ -1,4 +1,5 @@
 import Navbar from '../../Navbar'
+import Button from '../../utils/Button'
 import './Header.css'
 
 const Header = () => {
@@ -13,9 +14,7 @@ const Header = () => {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-          <div>
-            <button>See Product</button>
-          </div>
+          <Button color='orange' />
         </div>
       </div>
     </header>

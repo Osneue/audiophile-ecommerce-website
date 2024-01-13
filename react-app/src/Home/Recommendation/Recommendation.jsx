@@ -1,3 +1,4 @@
+import Button from '../../utils/Button'
 import './Recommendation.css'
 
 const TopRecommendation = () => {
@@ -11,7 +12,7 @@ const TopRecommendation = () => {
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </p>
-        <button>See Product</button>
+        <Button color='black' />
       </div>
     </div>
   )
@@ -21,7 +22,7 @@ const MiddleRecommendation = () => {
   return (
     <div className='middle-recommendation'>
       <h2>ZX7 SPEAKER</h2>
-      <button>See Product</button>
+      <Button color='black-border' />
     </div>
   )
 }
@@ -32,7 +33,7 @@ const BottomRecommendation = () => {
       <div className='bottom-recommendation-photo'></div>
       <div className='bottom-recommendation-info'>
         <h2>YX1 EARPHONES</h2>
-        <button>See Product</button>
+        <Button color='black-border' />
       </div>
     </div>
   )

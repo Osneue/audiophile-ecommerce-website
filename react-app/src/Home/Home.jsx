@@ -2,7 +2,6 @@ import Footer from '../Footer'
 import Advertisement from './Advertisement'
 import CategoryShopNav from './CategoryShopNav'
 import Header from './Header'
-import './Home.css'
 import Recommendation from './Recommendation'
 
 const Home = () => {

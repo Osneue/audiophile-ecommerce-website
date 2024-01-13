@@ -35,24 +35,6 @@
   opacity: 0.75;
 }
 
-.top-recommendation button {
-  background-color: black;
-  border: 0;
-  padding: 1em 2em;
-
-  color: #fff;
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.077em;
-  text-transform: uppercase;
-}
-
-.top-recommendation button:hover,
-.top-recommendation button:focus {
-  background-color: #4c4c4c;
-  cursor: pointer;
-}
-
 .top-recommendation-circle {
   width: 100%;
   height: 12.93rem;
@@ -92,28 +74,6 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 1.14em;
-}
-
-.middle-recommendation button,
-.bottom-recommendation button {
-  background: none;
-  border: 1px solid black;
-  padding: 1em 2em;
-
-  color: black;
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.077em;
-  text-transform: uppercase;
-}
-
-.middle-recommendation button:hover,
-.middle-recommendation button:focus,
-.bottom-recommendation button:hover,
-.bottom-recommendation button:focus {
-  background-color: black;
-  color: white;
-  cursor: pointer;
 }
 
 .bottom-recommendation {
