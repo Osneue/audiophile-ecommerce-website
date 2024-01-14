@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Overlay from 'src/components/overlay/overlay'
 import Advertisement from '../../components/advertisement'
 import CategoryShopNav from '../../components/categoryShopNav'
 import Footer from '../../containers/footer'
@@ -6,18 +7,14 @@ import Header from './containers/header'
 import Recommendation from './containers/recommendation'
 import './home.css'
 
-const Overlay = () => {
-  return <div className='overlay'></div>
-}
-
-const Home = () => {
-  const [menu, setMenu] = useState(false)
+const Home = ({ menu, setMenu }) => {
+  // const [menu, setMenu] = useState(false)
 
   return (
-    <section className='home-page'>
+    <section className='page-relative'>
       {menu && <Overlay />}
       <Header menu={menu} setMenu={setMenu} />
-      <CategoryShopNav />
+      <CategoryShopNav menu={menu} setMenu={setMenu} />
       <Recommendation />
       <Advertisement />
       <Footer />

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { IconFacebook, IconInstagram, IconTwitter } from '../../components/svgs'
 import './Footer.css'
 
@@ -10,31 +11,31 @@ const Footer = () => {
         </div>
         <ul className='footer-list'>
           <li className='footer-item'>
-            <a href='' className=''>
+            <Link to='/' className=''>
               HOME
-            </a>
+            </Link>
           </li>
           <li className='footer-item'>
-            <a href='' className=''>
+            <Link to='/headphones' className=''>
               HEADPHONES
-            </a>
+            </Link>
           </li>
           <li className='footer-item'>
-            <a href='' className=''>
+            <Link to='/speakers' className=''>
               SPEAKERS
-            </a>
+            </Link>
           </li>
           <li className='footer-item'>
-            <a href='' className=''>
+            <Link to='/earphones' className=''>
               EARPHONES
-            </a>
+            </Link>
           </li>
         </ul>
         <p>
-          Audiophile is an all in one stop to fulfill your audio needs. We're a
-          small team of music lovers and sound specialists who are devoted to
-          helping you get the most out of personal audio. Come and visit our
-          demo facility - we’re open 7 days a week.
+          Audiophile is an all in one stop to fulfill your audio needs. We're
+          Link small team of music lovers and sound specialists who are devoted
+          to helping you get the most out of personal audio. Come and visit our
+          demo facility - we’re open 7 days Link week.
         </p>
         <p>Copyright 2021. All Rights Reserved</p>
         <div className='footer-icon-container'>

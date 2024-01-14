@@ -1,13 +1,16 @@
+import { Link, useNavigate } from 'react-router-dom'
 import CategoryShopNav from '../../components/categoryShopNav'
 import './Navbar.css'
 
 const Navbar = ({ menu, setMenu }) => {
+  const navigate = useNavigate()
+
   return (
     <nav>
       <div className='nav-container'>
         {menu && (
           <div className='nav-menu'>
-            <CategoryShopNav />
+            <CategoryShopNav menu={menu} setMenu={setMenu} />
           </div>
         )}
         <div className='nav-icon nav-hamburger' onClick={() => setMenu(!menu)}>
@@ -16,21 +19,27 @@ const Navbar = ({ menu, setMenu }) => {
             alt='hamburger'
           />
         </div>
-        <div className='nav-icon nav-logo'>
+        <div
+          className='nav-icon nav-logo'
+          onClick={() => {
+            setMenu(false)
+            navigate('/')
+          }}
+        >
           <img src='./assets/shared/desktop/logo.svg' alt='logo' />
         </div>
         <ul>
           <li>
-            <a href=''>Home</a>
+            <Link to='/'>Home</Link>
           </li>
           <li>
-            <a href=''>Headphones</a>
+            <Link to='/headphones'>Headphones</Link>
           </li>
           <li>
-            <a href=''>Speakers</a>
+            <Link to='/speakers'>Speakers</Link>
           </li>
           <li>
-            <a href=''>Earphones</a>
+            <Link to='/earphones'>Earphones</Link>
           </li>
         </ul>
         <div className='nav-icon'>
