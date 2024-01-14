@@ -1,4 +1,4 @@
-import { IconArrowRight } from '../../../../components/svgs'
+import { IconArrowRight } from '../svgs'
 import './CategoryShopNav.css'
 
 const CategoryShopNavItem = ({ name, photo }) => {

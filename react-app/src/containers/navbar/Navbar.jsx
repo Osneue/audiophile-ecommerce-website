@@ -1,9 +1,15 @@
+import CategoryShopNav from '../../components/categoryShopNav'
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({ menu, setMenu }) => {
   return (
     <nav>
-      <div className='nav-icon nav-hamburger'>
+      {menu && (
+        <div className='nav-menu'>
+          <CategoryShopNav />
+        </div>
+      )}
+      <div className='nav-icon nav-hamburger' onClick={() => setMenu(!menu)}>
         <img src='./assets/shared/tablet/icon-hamburger.svg' alt='hamburger' />
       </div>
       <div className='nav-icon nav-logo'>

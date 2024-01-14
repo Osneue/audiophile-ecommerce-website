@@ -6,10 +6,26 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 3;
+  position: relative;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 90px;
+  left: calc(50% - 50vw);
+  z-index: 2;
+  width: 100vw;
+  background-color: white;
+}
+
+.nav-menu p {
+  margin: 0;
 }
 
 .nav-icon {
   display: flex;
+  cursor: pointer;
 }
 
 nav ul {
