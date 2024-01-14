@@ -1,4 +1,8 @@
 nav {
+  background-color: black;
+}
+
+.nav-container {
   width: 77%;
   margin: 0 auto;
   padding: 2em 0;
@@ -39,6 +43,10 @@ nav ul {
 }
 
 @media (min-width: 850px) {
+  .nav-menu {
+    display: none;
+  }
+
   .nav-hamburger {
     display: none;
   }

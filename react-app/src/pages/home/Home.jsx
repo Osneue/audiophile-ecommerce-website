@@ -1,7 +1,7 @@
 import { useState } from 'react'
+import Advertisement from '../../components/advertisement'
 import CategoryShopNav from '../../components/categoryShopNav'
 import Footer from '../../containers/footer'
-import Advertisement from './containers/advertisement'
 import Header from './containers/header'
 import Recommendation from './containers/recommendation'
 import './home.css'

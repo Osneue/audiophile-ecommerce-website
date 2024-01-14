@@ -1,0 +1,20 @@
+.header___title {
+  padding: 1.14em 0;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 600px) {
+  .header___title {
+    font-size: 2.5rem;
+    line-height: 1.1em; /* 110% */
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}
