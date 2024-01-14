@@ -1,5 +1,5 @@
-import Navbar from '../../Navbar'
-import Button from '../../UtilComponents/Button'
+import Button from '../../../../components/button'
+import Navbar from '../../../../containers/navbar'
 import './Header.css'
 
 const Header = () => {

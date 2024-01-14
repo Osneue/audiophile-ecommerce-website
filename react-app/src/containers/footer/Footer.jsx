@@ -1,8 +1,4 @@
-import {
-  IconFacebook,
-  IconInstagram,
-  IconTwitter,
-} from '../UtilComponents/SvgComponents'
+import { IconFacebook, IconInstagram, IconTwitter } from '../../components/svgs'
 import './Footer.css'
 
 const Footer = () => {
