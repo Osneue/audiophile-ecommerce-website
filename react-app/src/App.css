@@ -23,11 +23,6 @@ p {
   text-align: center;
 }
 
-.page-relative {
-  position: relative;
-  z-index: 0;
-}
-
 .container-centre {
   width: 90%;
   margin: 0 auto;

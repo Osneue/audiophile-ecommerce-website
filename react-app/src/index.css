@@ -14,3 +14,7 @@
   --white: #ffffff;
   --font-family: Manrope;
 }
+
+#root {
+  position: relative;
+}

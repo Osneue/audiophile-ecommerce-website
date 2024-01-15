@@ -12,9 +12,7 @@ const Home = () => {
   const [menu, setMenu] = useState(false)
 
   return (
-    <section className='page-relative'>
-      {menu && <Overlay />}
-      <Navbar menu={menu} setMenu={setMenu} />
+    <section>
       <Header />
       <CategoryShopNav />
       <Recommendation />

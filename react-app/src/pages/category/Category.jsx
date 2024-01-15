@@ -21,17 +21,11 @@ const Products = ({ category }) => {
 }
 
 const Category = ({ category }) => {
-  const [menu, setMenu] = useState(false)
-
-  // console.log(menu, setMenu)
-
   return (
-    <div className='category page-relative'>
-      {menu && <Overlay />}
-      <Navbar menu={menu} setMenu={setMenu} />
+    <div className='category'>
       <Header category={category} />
       <Products category={category} />
-      <CategoryShopNav setMenu={setMenu} />
+      <CategoryShopNav />
       <Advertisement />
       <Footer />
     </div>
