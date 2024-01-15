@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import CustomLink from 'src/components/customLink/CustomLink'
 import { IconFacebook, IconInstagram, IconTwitter } from '../../components/svgs'
 import './Footer.css'
 
@@ -10,26 +10,10 @@ const Footer = () => {
           <img src='./assets/shared/desktop/logo.svg' alt='' />
         </div>
         <ul className='footer-list'>
-          <li className='footer-item'>
-            <Link to='/' className=''>
-              HOME
-            </Link>
-          </li>
-          <li className='footer-item'>
-            <Link to='/headphones' className=''>
-              HEADPHONES
-            </Link>
-          </li>
-          <li className='footer-item'>
-            <Link to='/speakers' className=''>
-              SPEAKERS
-            </Link>
-          </li>
-          <li className='footer-item'>
-            <Link to='/earphones' className=''>
-              EARPHONES
-            </Link>
-          </li>
+          <CustomLink to='/'>Home</CustomLink>
+          <CustomLink to='/headphones'>Headphones</CustomLink>
+          <CustomLink to='/speakers'>Speakers</CustomLink>
+          <CustomLink to='/earphones'>Earphones</CustomLink>
         </ul>
         <p>
           Audiophile is an all in one stop to fulfill your audio needs. We're

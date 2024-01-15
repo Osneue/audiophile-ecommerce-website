@@ -72,7 +72,8 @@ nav ul {
   }
 
   nav a:hover,
-  nav a:focus {
+  nav a:focus,
+  .link--active {
     cursor: pointer;
     color: #d87d4a;
   }

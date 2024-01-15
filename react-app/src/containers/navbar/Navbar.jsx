@@ -1,4 +1,5 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import CustomLink from 'src/components/customLink/CustomLink'
 import CategoryShopNav from '../../components/categoryShopNav'
 import './Navbar.css'
 
@@ -29,18 +30,10 @@ const Navbar = ({ menu, setMenu }) => {
           <img src='./assets/shared/desktop/logo.svg' alt='logo' />
         </div>
         <ul>
-          <li>
-            <Link to='/'>Home</Link>
-          </li>
-          <li>
-            <Link to='/headphones'>Headphones</Link>
-          </li>
-          <li>
-            <Link to='/speakers'>Speakers</Link>
-          </li>
-          <li>
-            <Link to='/earphones'>Earphones</Link>
-          </li>
+          <CustomLink to='/'>Home</CustomLink>
+          <CustomLink to='/headphones'>Headphones</CustomLink>
+          <CustomLink to='/speakers'>Speakers</CustomLink>
+          <CustomLink to='/earphones'>Earphones</CustomLink>
         </ul>
         <div className='nav-icon'>
           <img src='./assets/shared/desktop/icon-cart.svg' alt='cart' />
