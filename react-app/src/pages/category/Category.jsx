@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Overlay from 'src/components/overlay/overlay'
 import Advertisement from '../../components/advertisement'
 import CategoryShopNav from '../../components/categoryShopNav'
@@ -19,8 +20,8 @@ const Products = ({ category }) => {
   )
 }
 
-const Category = ({ category, menu, setMenu }) => {
-  // const [menu, setMenu] = useState(false)
+const Category = ({ category }) => {
+  const [menu, setMenu] = useState(false)
 
   // console.log(menu, setMenu)
 
@@ -30,7 +31,7 @@ const Category = ({ category, menu, setMenu }) => {
       <Navbar menu={menu} setMenu={setMenu} />
       <Header category={category} />
       <Products category={category} />
-      <CategoryShopNav menu={menu} setMenu={setMenu} />
+      <CategoryShopNav setMenu={setMenu} />
       <Advertisement />
       <Footer />
     </div>

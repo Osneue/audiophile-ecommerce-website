@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Category from './pages/category'
@@ -9,15 +8,13 @@ const ScrollToTop = () => {
 }
 
 const App = () => {
-  const [menu, setMenu] = useState(false)
-
   return (
     <Routes>
       <Route
         path='/'
         element={
           <>
-            <Home menu={menu} setMenu={setMenu} />
+            <Home />
             <ScrollToTop />
           </>
         }
@@ -26,7 +23,7 @@ const App = () => {
         path='/headphones'
         element={
           <>
-            <Category category='HEADPHONES' menu={menu} setMenu={setMenu} />
+            <Category category='HEADPHONES' />
             <ScrollToTop />
           </>
         }
@@ -35,7 +32,7 @@ const App = () => {
         path='/earphones'
         element={
           <>
-            <Category category='EARPHONES' menu={menu} setMenu={setMenu} />
+            <Category category='EARPHONES' />
             <ScrollToTop />
           </>
         }
@@ -44,7 +41,7 @@ const App = () => {
         path='/speakers'
         element={
           <>
-            <Category category='SPEAKERS' menu={menu} setMenu={setMenu} />
+            <Category category='SPEAKERS' />
             <ScrollToTop />
           </>
         }

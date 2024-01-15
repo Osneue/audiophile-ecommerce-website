@@ -7,14 +7,14 @@ function lowerInitial(str) {
   return str.slice(0, 1).toLowerCase() + str.slice(1)
 }
 
-const CategoryShopNavItem = ({ name, photo, menu, setMenu }) => {
+const CategoryShopNavItem = ({ name, photo, setMenu }) => {
   const navigate = useNavigate()
 
   return (
     <div
       className='category-shop-nav'
       onClick={() => {
-        setMenu(false)
+        setMenu && setMenu(false)
         navigate('/' + lowerInitial(name))
       }}
     >
@@ -30,25 +30,22 @@ const CategoryShopNavItem = ({ name, photo, menu, setMenu }) => {
   )
 }
 
-const CategoryShopNav = ({ menu, setMenu }) => {
+const CategoryShopNav = ({ setMenu }) => {
   return (
     <div className='category-shop-nav-container'>
       <CategoryShopNavItem
         name='Headphones'
         photo='./assets/shared/desktop/image-category-thumbnail-headphones.png'
-        menu={menu}
         setMenu={setMenu}
       />
       <CategoryShopNavItem
         name='Speakers'
         photo='./assets/shared/desktop/image-category-thumbnail-speakers.png'
-        menu={menu}
         setMenu={setMenu}
       />
       <CategoryShopNavItem
         name='Earphones'
         photo='./assets/shared/desktop/image-category-thumbnail-earphones.png'
-        menu={menu}
         setMenu={setMenu}
       />
     </div>

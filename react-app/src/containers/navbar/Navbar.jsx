@@ -10,7 +10,7 @@ const Navbar = ({ menu, setMenu }) => {
       <div className='nav-container'>
         {menu && (
           <div className='nav-menu'>
-            <CategoryShopNav menu={menu} setMenu={setMenu} />
+            <CategoryShopNav setMenu={setMenu} />
           </div>
         )}
         <div className='nav-icon nav-hamburger' onClick={() => setMenu(!menu)}>

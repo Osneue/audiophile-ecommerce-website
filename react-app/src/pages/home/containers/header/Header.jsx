@@ -1,11 +1,9 @@
 import Button from '../../../../components/button'
-import Navbar from '../../../../containers/navbar'
 import './Header.css'
 
-const Header = (props) => {
+const Header = () => {
   return (
     <header>
-      <Navbar {...props} />
       <div className='header-info-container'>
         <div className='header-info'>
           <h4>NEW PRODUCT</h4>
