@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import CustomLink from 'src/components/customLink/CustomLink'
 import Overlay from 'src/components/overlay/overlay'
@@ -7,6 +7,16 @@ import './Navbar.css'
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 850) {
+        setMenu(false)
+      }
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   const navigate = useNavigate()
 
