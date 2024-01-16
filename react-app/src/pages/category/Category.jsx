@@ -1,5 +1,5 @@
 import Product from 'src/components/product'
-import data from 'src/data'
+import data from 'src/data/data'
 import Advertisement from '../../components/advertisement'
 import CategoryShopNav from '../../components/categoryShopNav'
 import Footer from '../../containers/footer'

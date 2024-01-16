@@ -15,11 +15,6 @@
   align-items: center;
 }
 
-.product__content h2,
-.product__content h3 {
-  text-align: left;
-}
-
 @media (min-width: 600px) {
   .product__text {
     padding: 0 4em;

@@ -1,7 +1,6 @@
 import classNames from 'classnames'
 import Button from 'src/components/button'
-import CategoryShopNav from 'src/components/categoryShopNav'
-import data from 'src/data'
+import data from 'src/data/data'
 import css from './alsoLike.module.css'
 
 const AlsoLike = ({ alsoLike }) => {

@@ -24,6 +24,8 @@
 .detail > div:nth-of-type(2) button {
   display: none;
 }
+.detail > div:nth-of-type(2) h2,
+.detail > div:nth-of-type(2) h3,
 .detail > div:nth-of-type(2) p {
   text-align: left;
 }

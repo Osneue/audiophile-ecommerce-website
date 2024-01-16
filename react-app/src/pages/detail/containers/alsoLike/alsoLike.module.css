@@ -19,7 +19,11 @@
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
-  min-height: 7.5rem;
+  height: 7.5rem;
+}
+
+.alsoLike__imgContainer img {
+  height: 6rem;
 }
 
 .alsoLike__item {

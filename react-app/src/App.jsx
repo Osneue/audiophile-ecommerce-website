@@ -13,12 +13,12 @@ const App = () => {
   return (
     <>
       <Navbar />
-      {/* <Detail category='HEADPHONES' productId={0} /> */}
+      <Detail category='HEADPHONES' productId={0} />
       {/* <Detail category='HEADPHONES' productId={1} /> */}
       {/* <Detail category='HEADPHONES' productId={2} /> */}
       {/* <Detail category='SPEAKERS' productId={0} /> */}
       {/* <Detail category='SPEAKERS' productId={1} /> */}
-      <Detail category='EARPHONES' productId={0} />
+      {/* <Detail category='EARPHONES' productId={0} /> */}
     </>
   )
   // return (
