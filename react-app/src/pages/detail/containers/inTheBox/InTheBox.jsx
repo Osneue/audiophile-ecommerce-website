@@ -8,8 +8,8 @@ const InTheBox = ({ inners }) => {
       {inners.map((inner, index) => {
         return (
           <div key={index} className={classNames(css.inTheBox__content)}>
-            <p>{`${inner[0]}x`}</p>
-            <p className='text-style'>{inner[1]}</p>
+            <p>{`${inner.num}x`}</p>
+            <p className='text-style'>{inner.item}</p>
           </div>
         )
       })}

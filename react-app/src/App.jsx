@@ -1,6 +1,8 @@
 import { Route, Routes } from 'react-router-dom'
+import products from 'src/data'
 import './App.css'
 import Navbar from './containers/navbar'
+import { PRODUCT_CATEGORY } from './data'
 import Category from './pages/category'
 import Detail from './pages/detail/Detail'
 import Home from './pages/home'
@@ -13,12 +15,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Detail category='HEADPHONES' productId={0} />
-      {/* <Detail category='HEADPHONES' productId={1} /> */}
-      {/* <Detail category='HEADPHONES' productId={2} /> */}
-      {/* <Detail category='SPEAKERS' productId={0} /> */}
-      {/* <Detail category='SPEAKERS' productId={1} /> */}
-      {/* <Detail category='EARPHONES' productId={0} /> */}
+      <Detail product={products[0]} />
     </>
   )
   // return (
@@ -38,7 +35,7 @@ const App = () => {
   //         path='/headphones'
   //         element={
   //           <>
-  //             <Category category='HEADPHONES' />
+  //             <Category category={PRODUCT_CATEGORY.HEADPHONES} />
   //             <ScrollToTop />
   //           </>
   //         }
@@ -47,7 +44,7 @@ const App = () => {
   //         path='/earphones'
   //         element={
   //           <>
-  //             <Category category='EARPHONES' />
+  //             <Category category={PRODUCT_CATEGORY.EARPHONES} />
   //             <ScrollToTop />
   //           </>
   //         }
@@ -56,7 +53,7 @@ const App = () => {
   //         path='/speakers'
   //         element={
   //           <>
-  //             <Category category='SPEAKERS' />
+  //             <Category category={PRODUCT_CATEGORY.SPEAKER} />
   //             <ScrollToTop />
   //           </>
   //         }

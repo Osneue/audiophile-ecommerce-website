@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import Button from 'src/components/button'
-import data from 'src/data/data'
+import products from 'src/data'
 import css from './alsoLike.module.css'
 
 const AlsoLike = ({ alsoLike }) => {
@@ -10,17 +10,16 @@ const AlsoLike = ({ alsoLike }) => {
       <h2 className={classNames(css.alsoLike__title)}>You May Also Like</h2>
       <div className={classNames(css.alsoLike__content)}>
         {alsoLike.map((item, index) => {
-          // console.log(data[item.category][item.id])
+          const liked = products.find((product) => product.name === item)
+          // console.log(item, liked)
+
           return (
             <div key={index} className={classNames(css.alsoLike__item)}>
               <div className={classNames(css.alsoLike__imgContainer)}>
-                <img
-                  src={data[item.category][item.id].photo_also_like}
-                  alt=''
-                />
+                <img src={liked.photo.product} alt='' />
               </div>
               <h2 className={classNames(css.alsoLike__itemName)}>
-                {item.name}
+                {liked.name}
               </h2>
               <Button color='orange' />
             </div>

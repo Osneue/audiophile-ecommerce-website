@@ -3,7 +3,6 @@ import Advertisement from 'src/components/advertisement/Advertisement'
 import CategoryShopNav from 'src/components/categoryShopNav/CategoryShopNav'
 import Product from 'src/components/product'
 import Footer from 'src/containers/footer/Footer'
-import data from 'src/data/data'
 import Price from './components/price'
 import AlsoLike from './containers/alsoLike'
 import Feature from './containers/feature'
@@ -19,16 +18,16 @@ const GoBack = () => {
   )
 }
 
-const Detail = ({ category, productId }) => {
+const Detail = ({ product }) => {
   return (
     <div className={classNames(css.detail)}>
       <GoBack />
-      <Product category={category} productId={productId} />
-      <Price price={data[category][productId].price} />
-      <Feature text={data[category][productId].feature} />
-      <InTheBox inners={data[category][productId].inTheBox} />
-      <Picture gallery={data[category][productId].gallery} />
-      <AlsoLike alsoLike={data[category][productId].alsoLike} />
+      <Product product={product} isRightPhoto={false} />
+      <Price price={product.price} />
+      <Feature text={product.feature} />
+      <InTheBox inners={product.inTheBox} />
+      <Picture gallery={product.photo.gallery} />
+      <AlsoLike alsoLike={product.alsoLike} />
       <CategoryShopNav />
       <Advertisement />
       <Footer />
