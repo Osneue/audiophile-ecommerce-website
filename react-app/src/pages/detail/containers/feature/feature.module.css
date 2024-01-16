@@ -1,0 +1,18 @@
+.feature {
+  margin-bottom: 6rem;
+}
+
+.feature__title,
+.feature__content {
+  text-align: left;
+}
+
+.feature__title {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5em; /* 150% */
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}

@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import Button from 'src/components/button'
-import data from '../../data'
+import data from 'src/data'
 import productCss from './product.module.css'
 
 const product = ({ category, productId }) => {

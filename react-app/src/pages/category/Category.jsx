@@ -1,12 +1,9 @@
-import { useState } from 'react'
-import Overlay from 'src/components/overlay/overlay'
+import Product from 'src/components/product'
+import data from 'src/data'
 import Advertisement from '../../components/advertisement'
 import CategoryShopNav from '../../components/categoryShopNav'
 import Footer from '../../containers/footer'
-import Navbar from '../../containers/navbar'
-import Product from './components/product'
 import Header from './containers/header'
-import data from './data'
 
 const Products = ({ category }) => {
   return (

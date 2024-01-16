@@ -1,0 +1,19 @@
+.inTheBox {
+  margin-bottom: 6rem;
+}
+
+.inTheBox__title {
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+.inTheBox__content {
+  display: flex;
+  gap: 1.25em;
+}
+
+.inTheBox__content > p:first-of-type {
+  color: var(--orange-dark);
+  font-weight: 700;
+  line-height: 1.667em; /* 166.667% */
+}

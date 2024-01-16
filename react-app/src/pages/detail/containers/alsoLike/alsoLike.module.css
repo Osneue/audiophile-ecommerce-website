@@ -1,0 +1,40 @@
+.alsoLike {
+  margin-bottom: 6rem;
+}
+
+.alsoLike__title {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5em; /* 150% */
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
+.alsoLike__imgContainer {
+  background-color: #f1f1f1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  min-height: 7.5rem;
+}
+
+.alsoLike__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.alsoLike__itemName {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.071em;
+  text-transform: uppercase;
+}
