@@ -14,7 +14,9 @@ const Home = () => {
   return (
     <section>
       <Header />
-      <CategoryShopNav />
+      <div className='home__category-shop-nav-container'>
+        <CategoryShopNav />
+      </div>
       <Recommendation />
       <Advertisement />
       <Footer />

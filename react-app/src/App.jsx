@@ -12,54 +12,54 @@ const ScrollToTop = () => {
 }
 
 const App = () => {
-  return (
-    <>
-      <Navbar />
-      <Detail product={products[0]} />
-    </>
-  )
   // return (
   //   <>
   //     <Navbar />
-  //     <Routes>
-  //       <Route
-  //         path='/'
-  //         element={
-  //           <>
-  //             <Home />
-  //             <ScrollToTop />
-  //           </>
-  //         }
-  //       />
-  //       <Route
-  //         path='/headphones'
-  //         element={
-  //           <>
-  //             <Category category={PRODUCT_CATEGORY.HEADPHONES} />
-  //             <ScrollToTop />
-  //           </>
-  //         }
-  //       />
-  //       <Route
-  //         path='/earphones'
-  //         element={
-  //           <>
-  //             <Category category={PRODUCT_CATEGORY.EARPHONES} />
-  //             <ScrollToTop />
-  //           </>
-  //         }
-  //       />
-  //       <Route
-  //         path='/speakers'
-  //         element={
-  //           <>
-  //             <Category category={PRODUCT_CATEGORY.SPEAKER} />
-  //             <ScrollToTop />
-  //           </>
-  //         }
-  //       />
-  //     </Routes>
+  //     <Detail product={products[0]} />
   //   </>
   // )
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route
+          path='/'
+          element={
+            <>
+              <Home />
+              <ScrollToTop />
+            </>
+          }
+        />
+        <Route
+          path='/headphones'
+          element={
+            <>
+              <Category category={PRODUCT_CATEGORY.HEADPHONES} />
+              <ScrollToTop />
+            </>
+          }
+        />
+        <Route
+          path='/earphones'
+          element={
+            <>
+              <Category category={PRODUCT_CATEGORY.EARPHONES} />
+              <ScrollToTop />
+            </>
+          }
+        />
+        <Route
+          path='/speakers'
+          element={
+            <>
+              <Category category={PRODUCT_CATEGORY.SPEAKER} />
+              <ScrollToTop />
+            </>
+          }
+        />
+      </Routes>
+    </>
+  )
 }
 export default App

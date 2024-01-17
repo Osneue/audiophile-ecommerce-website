@@ -3,6 +3,7 @@ import products from 'src/data'
 import Advertisement from '../../components/advertisement'
 import CategoryShopNav from '../../components/categoryShopNav'
 import Footer from '../../containers/footer'
+import './category.css'
 import Header from './containers/header'
 
 const Products = ({ category }) => {
@@ -28,7 +29,9 @@ const Category = ({ category }) => {
     <div className='category'>
       <Header category={category} />
       <Products category={category} />
-      <CategoryShopNav />
+      <div className='category__category-shop-nav-container'>
+        <CategoryShopNav />
+      </div>
       <Advertisement />
       <Footer />
     </div>
