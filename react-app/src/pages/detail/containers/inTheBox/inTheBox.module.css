@@ -5,6 +5,13 @@
 .inTheBox__title {
   text-align: left;
   margin-bottom: 1em;
+
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.125em; /* 112.5% */
+  letter-spacing: 0.0476em;
+  text-transform: uppercase;
 }
 
 .inTheBox__content {
@@ -16,4 +23,38 @@
   color: var(--orange-dark);
   font-weight: 700;
   line-height: 1.667em; /* 166.667% */
+}
+
+@media (min-width: 600px) {
+  .inTheBox {
+    display: flex;
+  }
+
+  .inTheBox__title {
+    flex: 1;
+    font-size: 2rem;
+  }
+
+  .inTheBox__contentContainer {
+    flex: 1;
+  }
+}
+
+@media (min-width: 850px) {
+  .inTheBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 30%;
+  }
+
+  .inTheBox__title {
+    flex: initial;
+    margin-bottom: 1.25em;
+  }
+
+  .inTheBox__contentContainer {
+    flex: initial;
+  }
 }

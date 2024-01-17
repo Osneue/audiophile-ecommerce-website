@@ -16,3 +16,18 @@
   text-transform: uppercase;
   margin-bottom: 1em;
 }
+
+@media (min-width: 600px) {
+  .feature__title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 850px) {
+  .feature {
+    width: 60%;
+  }
+  .feature__title {
+    line-height: 1.125em;
+  }
+}

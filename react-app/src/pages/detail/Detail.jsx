@@ -2,8 +2,8 @@ import classNames from 'classnames'
 import Advertisement from 'src/components/advertisement/Advertisement'
 import CategoryShopNav from 'src/components/categoryShopNav/CategoryShopNav'
 import Product from 'src/components/product'
+import ProductStyles from 'src/components/product/product-detail.module.css'
 import Footer from 'src/containers/footer/Footer'
-import Price from './components/price'
 import AlsoLike from './containers/alsoLike'
 import Feature from './containers/feature'
 import InTheBox from './containers/inTheBox'
@@ -22,13 +22,16 @@ const Detail = ({ product }) => {
   return (
     <div className={classNames(css.detail)}>
       <GoBack />
-      <Product product={product} isRightPhoto={false} />
-      <Price price={product.price} />
-      <Feature text={product.feature} />
-      <InTheBox inners={product.inTheBox} />
+      <Product product={product} isRightPhoto={false} styles={ProductStyles} />
+      <div className={classNames(css.featureAndInBox, 'container-centre')}>
+        <Feature text={product.feature} />
+        <InTheBox inners={product.inTheBox} />
+      </div>
       <Picture gallery={product.photo.gallery} />
       <AlsoLike alsoLike={product.alsoLike} />
-      <CategoryShopNav />
+      <div className={css.categoryShopNavContainer}>
+        <CategoryShopNav />
+      </div>
       <Advertisement />
       <Footer />
     </div>

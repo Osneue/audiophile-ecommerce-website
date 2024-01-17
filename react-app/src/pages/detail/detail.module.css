@@ -16,24 +16,18 @@
   background: none;
 }
 
-.detail > div:nth-of-type(2) {
-  padding: 0;
-  margin-bottom: 1.5em;
-}
-
-.detail > div:nth-of-type(2) button {
-  display: none;
-}
-.detail > div:nth-of-type(2) h2,
-.detail > div:nth-of-type(2) h3,
-.detail > div:nth-of-type(2) p {
-  text-align: left;
-}
-.detail > div:nth-of-type(2) > div:nth-of-type(2) {
-  align-items: start;
-}
-
-.detail > div:nth-last-of-type(2) {
-  padding: 0;
+.categoryShopNavContainer {
   margin-bottom: 6rem;
+}
+
+@media (min-width: 600px) {
+  /* .categoryShopNavContainer {
+    margin-bottom: 6rem;
+  } */
+}
+
+@media (min-width: 850px) {
+  .featureAndInBox {
+    display: flex;
+  }
 }

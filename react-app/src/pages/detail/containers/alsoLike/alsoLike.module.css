@@ -42,3 +42,28 @@
   letter-spacing: 0.071em;
   text-transform: uppercase;
 }
+
+@media (min-width: 600px) {
+  .alsoLike__title {
+    font-size: 2rem;
+  }
+
+  .alsoLike__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .alsoLike__item {
+    flex: 1;
+  }
+
+  .alsoLike__imgContainer {
+    height: 20rem;
+  }
+
+  .alsoLike__imgContainer img {
+    height: 12rem;
+    object-fit: cover;
+  }
+}
