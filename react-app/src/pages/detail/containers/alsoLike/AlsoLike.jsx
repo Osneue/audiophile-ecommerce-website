@@ -21,7 +21,7 @@ const AlsoLike = ({ alsoLike }) => {
               <h2 className={classNames(css.alsoLike__itemName)}>
                 {liked.name}
               </h2>
-              <Button color='orange' />
+              <Button color='orange' to={`/${liked.name}`} />
             </div>
           )
         })}

@@ -1,7 +1,7 @@
 import Button from '../../../../components/button'
 import './Header.css'
 
-const Header = () => {
+const Header = ({ productLink }) => {
   return (
     <header>
       <div className='header-info-container'>
@@ -12,7 +12,7 @@ const Header = () => {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-          <Button color='orange' />
+          <Button color='orange' to={`/${productLink}`} />
         </div>
       </div>
     </header>

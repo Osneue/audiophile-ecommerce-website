@@ -26,7 +26,7 @@ const App = () => {
           path='/'
           element={
             <>
-              <Home />
+              <Home products={products} />
               <ScrollToTop />
             </>
           }
@@ -58,6 +58,20 @@ const App = () => {
             </>
           }
         />
+        {products.map((product) => {
+          return (
+            <Route
+              key={product.name}
+              path={`/${product.name}`}
+              element={
+                <>
+                  <Detail product={product} />
+                  <ScrollToTop />
+                </>
+              }
+            />
+          )
+        })}
       </Routes>
     </>
   )

@@ -30,7 +30,7 @@ const product = ({ product, isRightPhoto, styles = css }) => {
           {product.intro}
         </p>
         {styles === css ? (
-          <Button color='orange' />
+          <Button color='orange' to={`/${product.name}`} />
         ) : (
           <Price styles={styles} price={product.price} />
         )}

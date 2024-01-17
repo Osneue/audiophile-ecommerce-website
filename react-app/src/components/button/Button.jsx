@@ -1,7 +1,9 @@
 import classnames from 'classnames'
+import { useNavigate } from 'react-router-dom'
 import BtnCss from './Button.module.css'
 
-const Button = ({ color }) => {
+const Button = ({ color, to }) => {
+  const navigate = useNavigate()
   let className
   if (color === 'orange') {
     className = classnames(BtnCss.btn, BtnCss.btnOrange)
@@ -11,6 +13,10 @@ const Button = ({ color }) => {
     className = classnames(BtnCss.btn, BtnCss.btnBlackBorder)
   }
 
-  return <button className={className}>See Product</button>
+  return (
+    <button className={className} onClick={() => navigate(to)}>
+      See Product
+    </button>
+  )
 }
 export default Button

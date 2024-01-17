@@ -1,6 +1,6 @@
 import { GALLERY, PREVIEW, PRODUCT } from './pictures'
 
-const PRODUCT_NAME = Object.freeze({
+export const PRODUCT_NAME = Object.freeze({
   XX99_MARK_II: 'XX99 Mark II',
   XX99_MARK_I: 'XX99 Mark I',
   XX59: 'XX59',

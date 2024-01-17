@@ -5,10 +5,10 @@ import Header from './containers/header'
 import Recommendation from './containers/recommendation'
 import './home.css'
 
-const Home = () => {
+const Home = ({ products }) => {
   return (
     <section>
-      <Header />
+      <Header productLink={products[0].name} />
       <div className='home__category-shop-nav-container'>
         <CategoryShopNav />
       </div>
