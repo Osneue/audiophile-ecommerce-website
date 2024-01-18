@@ -1,4 +1,5 @@
 import classNames from 'classnames'
+import { useNavigate } from 'react-router-dom'
 import Advertisement from 'src/components/advertisement/Advertisement'
 import CategoryShopNav from 'src/components/categoryShopNav/CategoryShopNav'
 import Product from 'src/components/product'
@@ -11,9 +12,18 @@ import Picture from './containers/picture'
 import css from './detail.module.css'
 
 const GoBack = () => {
+  const navigate = useNavigate()
+
   return (
     <div className={classNames(css.back, 'container-centre')}>
-      <button className={css.back__button}>Go Back</button>
+      <button
+        className={css.back__button}
+        onClick={() => {
+          navigate(-1)
+        }}
+      >
+        Go Back
+      </button>
     </div>
   )
 }

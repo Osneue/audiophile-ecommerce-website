@@ -13,6 +13,7 @@
   line-height: 1.667em; /* 166.667% */
   opacity: 0.5;
   border: 0;
+  cursor: pointer;
   background: none;
 }
 
