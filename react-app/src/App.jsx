@@ -3,9 +3,11 @@ import products from 'src/data'
 import './App.css'
 import { CartContextProvider } from './components/cart/cart-context'
 import { ProductContextProvider } from './components/product/product-context'
+import Footer from './containers/footer/Footer'
 import Navbar from './containers/navbar'
 import { PRODUCT_CATEGORY } from './data'
 import Category from './pages/category'
+import Checkout from './pages/checkout'
 import Detail from './pages/detail/Detail'
 import Home from './pages/home'
 
@@ -70,7 +72,17 @@ const App = () => {
                 />
               )
             })}
+            <Route
+              path='/checkout'
+              element={
+                <>
+                  <Checkout />
+                  <ScrollToTop />
+                </>
+              }
+            />
           </Routes>
+          <Footer />
         </ProductContextProvider>
       </CartContextProvider>
     </>

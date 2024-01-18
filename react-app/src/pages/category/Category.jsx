@@ -2,7 +2,6 @@ import Product from 'src/components/product'
 import products from 'src/data'
 import Advertisement from '../../components/advertisement'
 import CategoryShopNav from '../../components/category-shop-nav'
-import Footer from '../../containers/footer'
 import './category.css'
 import Header from './containers/header'
 
@@ -33,7 +32,6 @@ const Category = ({ category }) => {
         <CategoryShopNav />
       </div>
       <Advertisement />
-      <Footer />
     </div>
   )
 }

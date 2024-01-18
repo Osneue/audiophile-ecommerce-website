@@ -4,7 +4,6 @@ import Advertisement from 'src/components/advertisement/Advertisement'
 import CategoryShopNav from 'src/components/category-shop-nav/CategoryShopNav'
 import Product from 'src/components/product'
 import ProductStyles from 'src/components/product/product-detail.module.css'
-import Footer from 'src/containers/footer/Footer'
 import AlsoLike from './containers/alsoLike'
 import Feature from './containers/feature'
 import InTheBox from './containers/inTheBox'
@@ -43,7 +42,6 @@ const Detail = ({ product }) => {
         <CategoryShopNav />
       </div>
       <Advertisement />
-      <Footer />
     </div>
   )
 }

@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import { showPrice } from 'src/utility'
 import NumAdjust from '../num-adjust/NumAdjust'
 import { useCart } from './cart-context'
@@ -23,6 +24,7 @@ const CartItem = ({ item, setNum, getNum }) => {
 
 const Cart = () => {
   const { cart, getNum, setNum, clearNum } = useCart()
+  const navigate = useNavigate()
 
   const getAmount = () => {
     let amount = 0
@@ -64,7 +66,14 @@ const Cart = () => {
         <h3>Total</h3>
         <p>{`$ ${getAmount()}`}</p>
       </div>
-      <button className={styles.cart__checkout}>checkout</button>
+      <button
+        className={styles.cart__checkout}
+        onClick={() => {
+          navigate('/checkout')
+        }}
+      >
+        checkout
+      </button>
     </div>
   )
 }
