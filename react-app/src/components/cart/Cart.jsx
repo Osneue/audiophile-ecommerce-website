@@ -39,7 +39,7 @@ const Cart = () => {
   return (
     <div className={styles.cart}>
       <div className={styles.cart__title}>
-        <h2>cart (3)</h2>
+        <h2>{`cart (${cart.length})`}</h2>
         <button
           onClick={() => {
             handleClick()
