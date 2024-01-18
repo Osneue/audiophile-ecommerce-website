@@ -1,0 +1,136 @@
+.cart {
+  position: absolute;
+  top: 5.75rem;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 0.5rem;
+}
+
+.cart__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart__title h2 {
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.0714em;
+  text-transform: uppercase;
+}
+
+.cart__title button {
+  color: #000;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.667em; /* 166.667% */
+  text-decoration-line: underline;
+  border: 0;
+  background-color: white;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.cart__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cart__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart__item__adjustContainer {
+  flex: 1.5;
+}
+
+.cart__item__imgContainer {
+  width: 4rem;
+  height: 4rem;
+  background-color: #f1f1f1;
+}
+
+.cart__item__nameContainer {
+  flex: 1;
+}
+
+.cart__item__nameContainer h3 {
+  color: #000;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.667em; /* 166.667% */
+  text-align: left;
+}
+
+.cart__item__nameContainer p {
+  color: #000;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.785em; /* 178.571% */
+  opacity: 0.5;
+  text-align: left;
+}
+
+.cart__amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart__amount h3 {
+  color: #000;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.667em; /* 166.667% */
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.cart__amount p {
+  color: #000;
+  text-align: center;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cart__checkout {
+  padding: 1em 4.5em;
+  color: #fff;
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.0769em;
+  text-transform: uppercase;
+  background-color: var(--orange-dark);
+  border: 0;
+}
+
+.cart__checkout:hover {
+  cursor: pointer;
+  background-color: var(--orange-light);
+}
+
+@media (min-width: 600px) {
+  .cart {
+    left: 50%;
+  }
+}
+
+@media (min-width: 850px) {
+  .cart {
+    left: unset;
+    width: 50%;
+    max-width: 24rem;
+  }
+}

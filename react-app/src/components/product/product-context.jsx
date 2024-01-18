@@ -15,7 +15,7 @@ export const ProductContextProvider = ({ children }) => {
   useEffect(() => {
     const newProducts = []
     productData.forEach((item) => {
-      newProducts.push({ name: item.name, num: 1 })
+      newProducts.push({ ...item, num: 1 })
     })
     setProducts(newProducts)
     // console.log('init product state', newProducts)

@@ -1,5 +1,8 @@
 import classNames from 'classnames'
 import Button from 'src/components/button'
+import { showPrice } from 'src/utility'
+import { useCart } from '../cart/cart-context'
+import NumAdjust from '../num-adjust'
 import { useProduct } from './product-context'
 import css from './product.module.css'
 
@@ -33,7 +36,7 @@ const product = ({ product, isRightPhoto, styles = css }) => {
         {styles === css ? (
           <Button color='orange' to={`/${product.name}`} />
         ) : (
-          <Price styles={styles} price={product.price} name={product.name} />
+          <Price styles={styles} target={product} />
         )}
       </div>
     </div>
@@ -41,74 +44,51 @@ const product = ({ product, isRightPhoto, styles = css }) => {
 }
 export default product
 
-const Price = ({ styles, price, name }) => {
+const Price = ({ styles, target }) => {
   const [products, setProducts] = useProduct()
+  const [cart, setCart] = useCart()
 
-  // console.log(name, products)
+  const handleAddToCart = () => {
+    // console.log('add to cart')
 
-  const getAmount = () => {
-    const index = products.findIndex((i) => i.name == name)
-    if (index < 0) return 1
-    return products[index].num
-  }
-
-  const addAmount = () => {
     const newProducts = [...products]
-    const index = newProducts.findIndex((i) => i.name == name)
-    if (index < 0) throw new Error(`Can't find this product`)
-    if (newProducts[index].num < 99) newProducts[index].num++
-    setProducts(newProducts)
-    // console.log(newProducts)
-  }
+    const productIndex = newProducts.findIndex((i) => i.name == target.name)
+    if (productIndex < 0) throw new Error(`Can't find this product`)
 
-  const subAmount = () => {
-    const newProducts = [...products]
-    const index = newProducts.findIndex((i) => i.name == name)
-    if (index < 0) throw new Error(`Can't find this product`)
-    if (newProducts[index].num > 1) newProducts[index].num--
-    setProducts(newProducts)
-    // console.log(newProducts)
-  }
+    const newCart = [...cart]
+    const cartIndex = newCart.findIndex((i) => i.name == target.name)
+    if (cartIndex < 0) {
+      newCart.push({ ...target, num: newProducts[productIndex].num })
+    } else {
+      newCart[cartIndex].num += newProducts[productIndex].num
+      newCart[cartIndex].num = Math.min(99, newCart[cartIndex].num)
+      newCart[cartIndex].num = Math.max(0, newCart[cartIndex].num)
+    }
 
-  const handleInput = (input) => {
-    if (!/^\d*$/.test(input.value)) return
-    const newProducts = [...products]
-    const index = newProducts.findIndex((i) => i.name == name)
-    if (index < 0) throw new Error(`Can't find this product`)
-    newProducts[index].num = input.value
-    setProducts(newProducts)
-  }
+    newProducts[productIndex].num = 1
 
-  const handleInputLoseFocus = () => {
-    const newProducts = [...products]
-    const index = newProducts.findIndex((i) => i.name == name)
-    if (index < 0) throw new Error(`Can't find this product`)
-    if (newProducts[index].num > 99) newProducts[index].num = 99
-    if (newProducts[index].num < 1) newProducts[index].num = 1
     setProducts(newProducts)
+    setCart(newCart)
+
+    // console.log(newProducts, newCart)
   }
 
   return (
     <div className={classNames(styles.price)}>
-      <h3 className={classNames(styles.price__figure)}>${price}</h3>
+      <h3 className={classNames(styles.price__figure)}>{`$ ${showPrice(
+        target.price
+      )}`}</h3>
       <div className={classNames(styles.price__check)}>
-        <div className={classNames(styles.price__adjust)}>
-          <p className={styles.price__minus} onClick={() => subAmount()}>
-            -
-          </p>
-          {/* <p contentEditable='true'>{getAmount()}</p> */}
-          <input
-            type='text'
-            className={styles.price__num}
-            value={getAmount()}
-            onChange={(e) => handleInput(e.target)}
-            onBlur={() => handleInputLoseFocus()}
-          />
-          <p className={styles.price__plus} onClick={() => addAmount()}>
-            +
-          </p>
-        </div>
-        <button type='button' className={classNames(styles.price__add)}>
+        <NumAdjust
+          name={target.name}
+          products={products}
+          setProducts={setProducts}
+        />
+        <button
+          type='button'
+          className={classNames(styles.price__add)}
+          onClick={() => handleAddToCart()}
+        >
           ADD TO CART
         </button>
       </div>

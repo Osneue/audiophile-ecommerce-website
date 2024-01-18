@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Cart from 'src/components/cart'
 import CustomLink from 'src/components/customLink/CustomLink'
 import Overlay from 'src/components/overlay/overlay'
 import CategoryShopNav from '../../components/categoryShopNav'
@@ -7,6 +8,7 @@ import './Navbar.css'
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false)
+  const [cart, setCart] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,7 +24,7 @@ const Navbar = () => {
 
   return (
     <>
-      {menu && <Overlay />}
+      {(menu || cart) && <Overlay />}
       <nav>
         <div className='nav-container'>
           {menu && (
@@ -54,9 +56,10 @@ const Navbar = () => {
             <CustomLink to='/speakers'>Speakers</CustomLink>
             <CustomLink to='/earphones'>Earphones</CustomLink>
           </ul>
-          <div className='nav-icon'>
+          <div className='nav-icon' onClick={() => setCart(!cart)}>
             <img src='./assets/shared/desktop/icon-cart.svg' alt='cart' />
           </div>
+          {cart && <Cart />}
         </div>
       </nav>
     </>

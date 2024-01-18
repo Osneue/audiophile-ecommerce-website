@@ -3,7 +3,7 @@ nav {
 }
 
 .nav-container {
-  width: 77%;
+  width: 90%;
   margin: 0 auto;
   padding: 2em 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -48,6 +48,10 @@ nav ul {
 }
 
 @media (min-width: 850px) {
+  .nav-container {
+    width: 77%;
+  }
+
   .nav-menu {
     display: none;
   }
