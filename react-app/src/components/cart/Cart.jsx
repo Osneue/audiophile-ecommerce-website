@@ -12,7 +12,7 @@ const CartItem = ({ item, setNum, getNum }) => {
       </div>
       <div className={styles.cart__item__nameContainer}>
         <h3>{item.shortName}</h3>
-        <p>{`$ ${item.price}`}</p>
+        <p>{`$ ${showPrice(item.price)}`}</p>
       </div>
       <div className={styles.cart__item__adjustContainer}>
         <NumAdjust name={item.name} setNum={setNum} getNum={getNum} />
