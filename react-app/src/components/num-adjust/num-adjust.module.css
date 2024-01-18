@@ -26,6 +26,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   opacity: 0.25;
+  user-select: none;
 }
 
 .price__minus:hover,

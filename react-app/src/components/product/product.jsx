@@ -45,32 +45,13 @@ const product = ({ product, isRightPhoto, styles = css }) => {
 export default product
 
 const Price = ({ styles, target }) => {
-  const [products, setProducts] = useProduct()
-  const [cart, setCart] = useCart()
+  const { getNum: getProductNum, setNum: setProductNum } = useProduct()
+  const { addNum: addCartNum } = useCart()
 
   const handleAddToCart = () => {
-    // console.log('add to cart')
-
-    const newProducts = [...products]
-    const productIndex = newProducts.findIndex((i) => i.name == target.name)
-    if (productIndex < 0) throw new Error(`Can't find this product`)
-
-    const newCart = [...cart]
-    const cartIndex = newCart.findIndex((i) => i.name == target.name)
-    if (cartIndex < 0) {
-      newCart.push({ ...target, num: newProducts[productIndex].num })
-    } else {
-      newCart[cartIndex].num += newProducts[productIndex].num
-      newCart[cartIndex].num = Math.min(99, newCart[cartIndex].num)
-      newCart[cartIndex].num = Math.max(0, newCart[cartIndex].num)
-    }
-
-    newProducts[productIndex].num = 1
-
-    setProducts(newProducts)
-    setCart(newCart)
-
-    // console.log(newProducts, newCart)
+    const num = getProductNum(target.name)
+    addCartNum(target, num)
+    setProductNum(target.name, 1)
   }
 
   return (
@@ -81,8 +62,8 @@ const Price = ({ styles, target }) => {
       <div className={classNames(styles.price__check)}>
         <NumAdjust
           name={target.name}
-          products={products}
-          setProducts={setProducts}
+          setNum={setProductNum}
+          getNum={getProductNum}
         />
         <button
           type='button'

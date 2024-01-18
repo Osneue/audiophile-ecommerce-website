@@ -3,7 +3,7 @@ import NumAdjust from '../num-adjust/NumAdjust'
 import { useCart } from './cart-context'
 import styles from './cart.module.css'
 
-const CartItem = ({ item, cart, setCart }) => {
+const CartItem = ({ item, setNum, getNum }) => {
   // console.log(item)
   return (
     <div className={styles.cart__item}>
@@ -15,14 +15,14 @@ const CartItem = ({ item, cart, setCart }) => {
         <p>{`$ ${item.price}`}</p>
       </div>
       <div className={styles.cart__item__adjustContainer}>
-        <NumAdjust name={item.name} products={cart} setProducts={setCart} />
+        <NumAdjust name={item.name} setNum={setNum} getNum={getNum} />
       </div>
     </div>
   )
 }
 
 const Cart = () => {
-  const [cart, setCart] = useCart()
+  const { cart, getNum, setNum, clearNum } = useCart()
 
   const getAmount = () => {
     let amount = 0
@@ -33,7 +33,7 @@ const Cart = () => {
   }
 
   const handleClick = () => {
-    setCart([])
+    clearNum()
   }
 
   return (
@@ -54,8 +54,8 @@ const Cart = () => {
             <CartItem
               key={item.name}
               item={item}
-              cart={cart}
-              setCart={setCart}
+              setNum={setNum}
+              getNum={getNum}
             />
           )
         })}
