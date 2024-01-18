@@ -1,4 +1,4 @@
-import './Advertisement.css'
+import './advertisement.css'
 
 const Advertisement = () => {
   return (

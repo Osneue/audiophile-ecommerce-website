@@ -1,6 +1,6 @@
 import { PRODUCT_NAME } from 'src/data'
 import Button from '../../../../components/button'
-import './Recommendation.css'
+import './recommendation.css'
 
 const TopRecommendation = () => {
   return (

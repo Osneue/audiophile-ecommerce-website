@@ -1,5 +1,5 @@
 import Advertisement from '../../components/advertisement'
-import CategoryShopNav from '../../components/categoryShopNav'
+import CategoryShopNav from '../../components/category-shop-nav'
 import Footer from '../../containers/footer'
 import Header from './containers/header'
 import Recommendation from './containers/recommendation'

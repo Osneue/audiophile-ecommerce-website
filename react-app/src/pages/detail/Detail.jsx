@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import { useNavigate } from 'react-router-dom'
 import Advertisement from 'src/components/advertisement/Advertisement'
-import CategoryShopNav from 'src/components/categoryShopNav/CategoryShopNav'
+import CategoryShopNav from 'src/components/category-shop-nav/CategoryShopNav'
 import Product from 'src/components/product'
 import ProductStyles from 'src/components/product/product-detail.module.css'
 import Footer from 'src/containers/footer/Footer'

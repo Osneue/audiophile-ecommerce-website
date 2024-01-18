@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Cart from 'src/components/cart'
-import CustomLink from 'src/components/customLink/CustomLink'
+import CustomLink from 'src/components/custom-link/CustomLink'
 import Overlay from 'src/components/overlay/overlay'
-import CategoryShopNav from '../../components/categoryShopNav'
-import './Navbar.css'
+import CategoryShopNav from '../../components/category-shop-nav'
+import './navbar.css'
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false)

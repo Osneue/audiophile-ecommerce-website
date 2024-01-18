@@ -1,5 +1,5 @@
 import Button from '../../../../components/button'
-import './Header.css'
+import './header.css'
 
 const Header = ({ productLink }) => {
   return (

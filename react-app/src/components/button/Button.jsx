@@ -1,6 +1,6 @@
 import classnames from 'classnames'
 import { useNavigate } from 'react-router-dom'
-import BtnCss from './Button.module.css'
+import BtnCss from './button.module.css'
 
 const Button = ({ color, to }) => {
   const navigate = useNavigate()

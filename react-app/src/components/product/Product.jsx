@@ -4,7 +4,7 @@ import { showPrice } from 'src/utility'
 import { useCart } from '../cart/cart-context'
 import NumAdjust from '../num-adjust'
 import { useProduct } from './product-context'
-import css from './product.module.css'
+import css from './product-preview.module.css'
 
 const product = ({ product, isRightPhoto, styles = css }) => {
   return (

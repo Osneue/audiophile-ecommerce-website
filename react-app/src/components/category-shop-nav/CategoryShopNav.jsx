@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { IconArrowRight } from '../svgs'
-import './CategoryShopNav.css'
+import './category-shop-nav.css'
 
 function lowerInitial(str) {
   // console.log(str.slice(0, 1).toLowerCase() + str.slice(1))

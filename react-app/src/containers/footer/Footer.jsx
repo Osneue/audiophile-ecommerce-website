@@ -1,6 +1,6 @@
-import CustomLink from 'src/components/customLink/CustomLink'
+import CustomLink from 'src/components/custom-link/CustomLink'
 import { IconFacebook, IconInstagram, IconTwitter } from '../../components/svgs'
-import './Footer.css'
+import './footer.css'
 
 const Footer = () => {
   return (
