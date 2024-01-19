@@ -1,0 +1,23 @@
+.checkout {
+  background-color: #fafafa;
+}
+
+.goBack {
+  padding: 1.5em 0;
+}
+
+.goBack button {
+  color: #000;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.667em; /* 166.667% */
+  opacity: 0.5;
+  border: 0;
+  cursor: pointer;
+  background: none;
+}
+
+.goBack button:hover {
+  color: var(--orange-dark);
+  opacity: 1;
+}

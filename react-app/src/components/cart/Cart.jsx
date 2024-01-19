@@ -1,38 +1,14 @@
 import { useNavigate } from 'react-router-dom'
+import { useNavbar } from 'src/containers/navbar/navbar-context'
 import { showPrice } from 'src/utility'
-import NumAdjust from '../num-adjust/NumAdjust'
+import CartItem from '../cart-item/CartItem'
 import { useCart } from './cart-context'
 import styles from './cart.module.css'
 
-const CartItem = ({ item, setNum, getNum }) => {
-  // console.log(item)
-  return (
-    <div className={styles.cart__item}>
-      <div className={styles.cart__item__imgContainer}>
-        <img src={item.photo.preview} alt='' />
-      </div>
-      <div className={styles.cart__item__nameContainer}>
-        <h3>{item.shortName}</h3>
-        <p>{`$ ${showPrice(item.price)}`}</p>
-      </div>
-      <div className={styles.cart__item__adjustContainer}>
-        <NumAdjust name={item.name} setNum={setNum} getNum={getNum} />
-      </div>
-    </div>
-  )
-}
-
 const Cart = () => {
-  const { cart, getNum, setNum, clearNum } = useCart()
+  const { cart, getNum, setNum, clearNum, getTotalPrice } = useCart()
+  const { closeCart } = useNavbar()
   const navigate = useNavigate()
-
-  const getAmount = () => {
-    let amount = 0
-    cart.forEach((item) => {
-      amount += Number(item.price) * Number(item.num)
-    })
-    return showPrice(amount)
-  }
 
   const handleClick = () => {
     clearNum()
@@ -64,11 +40,12 @@ const Cart = () => {
       </div>
       <div className={styles.cart__amount}>
         <h3>Total</h3>
-        <p>{`$ ${getAmount()}`}</p>
+        <p>{`$ ${showPrice(getTotalPrice())}`}</p>
       </div>
       <button
         className={styles.cart__checkout}
         onClick={() => {
+          closeCart()
           navigate('/checkout')
         }}
       >

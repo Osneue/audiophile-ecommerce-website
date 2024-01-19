@@ -4,11 +4,12 @@ import Cart from 'src/components/cart'
 import CustomLink from 'src/components/custom-link/CustomLink'
 import Overlay from 'src/components/overlay/overlay'
 import CategoryShopNav from '../../components/category-shop-nav'
+import { useNavbar } from './navbar-context'
 import './navbar.css'
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false)
-  const [cart, setCart] = useState(false)
+  const { isCartOpen, setIsCartOpen } = useNavbar()
 
   useEffect(() => {
     const handleResize = () => {
@@ -24,7 +25,7 @@ const Navbar = () => {
 
   return (
     <>
-      {(menu || cart) && <Overlay />}
+      {(menu || isCartOpen) && <Overlay />}
       <nav>
         <div className='nav-container'>
           {menu && (
@@ -56,10 +57,10 @@ const Navbar = () => {
             <CustomLink to='/speakers'>Speakers</CustomLink>
             <CustomLink to='/earphones'>Earphones</CustomLink>
           </ul>
-          <div className='nav-icon' onClick={() => setCart(!cart)}>
+          <div className='nav-icon' onClick={() => setIsCartOpen(!isCartOpen)}>
             <img src='./assets/shared/desktop/icon-cart.svg' alt='cart' />
           </div>
-          {cart && <Cart />}
+          {isCartOpen && <Cart />}
         </div>
       </nav>
     </>

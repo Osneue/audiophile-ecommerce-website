@@ -1,9 +1,0 @@
-.category__category-shop-nav-container {
-  margin: 4.25rem 0;
-}
-
-@media (min-width: 600px) {
-  .category__category-shop-nav-container {
-    margin: 6rem 0;
-  }
-}

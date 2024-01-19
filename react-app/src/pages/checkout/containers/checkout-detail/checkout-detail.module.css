@@ -1,0 +1,128 @@
+.checkout {
+  margin-bottom: 2rem;
+  background-color: white;
+  padding: 1.5rem;
+  padding-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+.checkoutTittle {
+  color: #000;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.0357em;
+  text-transform: uppercase;
+  margin-bottom: 1.14em;
+  text-align: left;
+}
+
+.checkoutTypeContainer {
+  margin-bottom: 2rem;
+}
+.checkoutTypeContainer:last-of-type {
+  margin: 0;
+}
+
+.checkoutType {
+  color: #d87d4a;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.923em; /* 192.308% */
+  letter-spacing: 0.0714em;
+  text-transform: uppercase;
+  margin-bottom: 1.23em;
+  text-align: left;
+}
+
+.checkoutLabel,
+.paymentTitle {
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: -0.0178em;
+}
+
+.checkoutLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkoutInputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+.checkoutInputContainer:last-of-type {
+  margin-bottom: 0;
+}
+
+.checkoutInputContainer label {
+  margin-bottom: 0.75em;
+  cursor: pointer;
+}
+
+.checkoutInputContainer input {
+  padding: 1em 1.5em;
+  border: 1px solid #cfcfcf;
+  border-radius: 0.5rem;
+}
+
+.checkoutInputContainer input:hover,
+.checkoutInputContainer input:focus {
+  accent-color: var(--orange-dark);
+  border: 1px solid var(--orange-dark);
+  cursor: pointer;
+}
+.checkoutInputContainer input:focus {
+  border: 2px solid var(--orange-dark);
+  outline: none;
+}
+
+.checkoutInputContainer.error label {
+  color: #cd2c2c;
+}
+
+.checkoutInputContainer.error input {
+  border: 2px solid #cd2c2c;
+}
+
+.paymentTitle {
+  text-align: left;
+  margin-bottom: 1.5em;
+}
+
+.paymentMethod {
+  margin-bottom: 2rem;
+}
+
+.radioContainer {
+  padding: 1em;
+  border: 1px solid #cfcfcf;
+  border-radius: 0.5em;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.radioContainer:last-of-type {
+  margin: 0;
+}
+
+.radioContainer:hover,
+.radioContainer.active {
+  cursor: pointer;
+  border: 1px solid var(--orange-dark);
+}
+
+.radioContainer.active {
+  border: 2px solid var(--orange-dark);
+}
+
+.wrongFormat {
+  text-align: right;
+  color: #cd2c2c;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: -0.0178em;
+}

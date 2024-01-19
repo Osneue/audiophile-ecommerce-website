@@ -1,0 +1,73 @@
+.summary {
+  background-color: white;
+  margin-bottom: 6em;
+  padding: 2em 1.5em;
+  border-radius: 0.5em;
+}
+
+.title {
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.0627em;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 1.72em;
+}
+
+.cartItems {
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.feeContainer h3 {
+  color: #000;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.667em; /* 166.667% */
+  opacity: 0.5;
+  text-align: left;
+}
+
+.feeContainer p {
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.fee {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.fee:nth-last-of-type(2) {
+  margin-bottom: 1.5em;
+}
+
+.fee:nth-last-of-type(1) {
+  margin-bottom: 2em;
+}
+
+.button {
+  color: #fff;
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.0769em;
+  text-transform: uppercase;
+  background-color: var(--orange-dark);
+  padding: 1em 0;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
