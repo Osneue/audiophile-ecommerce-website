@@ -15,7 +15,6 @@ const useCheckout = () => {
     zipCode: '',
     city: '',
     country: '',
-    payment: '',
     eMoneyNum: '',
     eMoneyPin: '',
 
@@ -26,57 +25,82 @@ const useCheckout = () => {
     isEMoneyPinValid: true,
   })
 
+  const regExps = [
+    /^[0-9a-zA-Z_]{3,}@[0-9a-zA-Z]+.[a-zA-Z]{2,}$/,
+    /^[0-9]{5}$/,
+    /\+?[0-9 -]{11,}$/,
+    /[0-9]{6,}$/,
+    /[0-9]{6,8}$/,
+  ]
+
   const handleChange = (e) => {
-    // console.log(e.target.id, e.target.name, e.target.value)
-    setBuyer({ ...buyer, [e.target.name]: e.target.value })
+    let newBuyer = { ...buyer, [e.target.name]: e.target.value }
+
+    if (e.target.name === 'email')
+      newBuyer = __handleChange(
+        regExps[0],
+        e.target.value,
+        'isEmailValid',
+        newBuyer
+      )
+    if (e.target.name === 'zipCode')
+      newBuyer = __handleChange(
+        regExps[1],
+        e.target.value,
+        'isZIPCodeValid',
+        newBuyer
+      )
+    if (e.target.name === 'phone')
+      newBuyer = __handleChange(
+        regExps[2],
+        e.target.value,
+        'isPhoneValid',
+        newBuyer
+      )
+    if (e.target.name === 'eMoneyNum')
+      newBuyer = __handleChange(
+        regExps[3],
+        e.target.value,
+        'isEMoneyNumValid',
+        newBuyer
+      )
+    if (e.target.name === 'eMoneyPin')
+      newBuyer = __handleChange(
+        regExps[4],
+        e.target.value,
+        'isEMoneyPinValid',
+        newBuyer
+      )
+
+    setBuyer(newBuyer)
+  }
+
+  const __handleChange = (regExp, text, attr, newBuyer) => {
+    if (regExp.test(text)) {
+      return { ...newBuyer, [attr]: true }
+    }
+    return newBuyer
   }
 
   const handleBlur = (e) => {
-    if (e.target.name === 'email') handleEmail(e.target.value)
-    if (e.target.name === 'zipCode') handleZipCode(e.target.value)
-    if (e.target.name === 'phone') handlePhone(e.target.value)
-    if (e.target.name === 'eMoneyNum') handleEMoneyNum(e.target.value)
-    if (e.target.name === 'eMoneyPin') handleEMoneyPin(e.target.value)
+    if (e.target.name === 'email')
+      __handleBlur(regExps[0], e.target.value, 'isEmailValid')
+    if (e.target.name === 'zipCode')
+      __handleBlur(regExps[1], e.target.value, 'isZIPCodeValid')
+    if (e.target.name === 'phone')
+      __handleBlur(regExps[2], e.target.value, 'isPhoneValid')
+    if (e.target.name === 'eMoneyNum')
+      __handleBlur(regExps[3], e.target.value, 'isEMoneyNumValid')
+    if (e.target.name === 'eMoneyPin')
+      __handleBlur(regExps[4], e.target.value, 'isEMoneyPinValid')
   }
 
-  const handleEmail = (address) => {
-    if (!/^[0-9a-zA-Z_]{3,}@[0-9a-zA-Z]+.[a-zA-Z]{2,}$/.test(address)) {
-      setBuyer({ ...buyer, isEmailValid: false })
+  const __handleBlur = (regExp, text, attr) => {
+    if (!regExp.test(text)) {
+      setBuyer({ ...buyer, [attr]: false })
       return
     }
-    setBuyer({ ...buyer, isEmailValid: true })
-  }
-
-  const handleZipCode = (code) => {
-    if (!/^[0-9]{5}$/.test(code)) {
-      setBuyer({ ...buyer, isZIPCodeValid: false })
-      return
-    }
-    setBuyer({ ...buyer, isZIPCodeValid: true })
-  }
-
-  const handlePhone = (phone) => {
-    if (!/\+?[0-9 -]{11,}$/.test(phone)) {
-      setBuyer({ ...buyer, isPhoneValid: false })
-      return
-    }
-    setBuyer({ ...buyer, isPhoneValid: true })
-  }
-
-  const handleEMoneyNum = (num) => {
-    if (!/[0-9]{6,}$/.test(num)) {
-      setBuyer({ ...buyer, isEMoneyNumValid: false })
-      return
-    }
-    setBuyer({ ...buyer, isEMoneyNumValid: true })
-  }
-
-  const handleEMoneyPin = (pin) => {
-    if (!/[0-9]{6,8}$/.test(pin)) {
-      setBuyer({ ...buyer, isEMoneyPinValid: false })
-      return
-    }
-    setBuyer({ ...buyer, isEMoneyPinValid: true })
+    setBuyer({ ...buyer, [attr]: true })
   }
 
   return {
