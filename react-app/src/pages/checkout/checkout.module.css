@@ -21,3 +21,19 @@
   color: var(--orange-dark);
   opacity: 1;
 }
+
+@media (min-width: 850px) {
+  .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+  }
+
+  .detail {
+    flex: 2;
+  }
+
+  .summary {
+    flex: 1;
+  }
+}

@@ -19,8 +19,12 @@ const Checkout = () => {
         </button>
       </div>
       <div className={styles.content}>
-        <CheckoutDetail />
-        <Summary />
+        <div className={styles.detail}>
+          <CheckoutDetail />
+        </div>
+        <div className={styles.summary}>
+          <Summary />
+        </div>
       </div>
     </div>
   )

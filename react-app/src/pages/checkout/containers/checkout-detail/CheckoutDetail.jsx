@@ -27,28 +27,34 @@ const CheckoutDetail = () => {
 
       <div className={styles.checkoutTypeContainer}>
         <h3 className={styles.checkoutType}>Billing Details</h3>
-        <Name {...inputProps} />
-        <Email {...inputProps} />
-        <Phone {...inputProps} />
+        <div className={styles.billing}>
+          <Name {...inputProps} />
+          <Email {...inputProps} />
+          <Phone {...inputProps} />
+        </div>
       </div>
 
       <div className={styles.checkoutTypeContainer}>
         <h3 className={styles.checkoutType}>shipping info</h3>
-        <Address {...inputProps} />
-        <ZIPCode {...inputProps} />
-        <City {...inputProps} />
-        <Country {...inputProps} />
+        <div className={styles.shipping}>
+          <Address {...inputProps} />
+          <ZIPCode {...inputProps} />
+          <City {...inputProps} />
+          <Country {...inputProps} />
+        </div>
       </div>
 
       <div className={styles.checkoutTypeContainer}>
         <h3 className={styles.checkoutType}>payment details</h3>
         <div>
-          <h4 className={styles.paymentTitle}>Payment Method</h4>
-          <div className={styles.paymentMethod}>
-            <RadioBox label={radio[0]} {...inputProps} />
-            <RadioBox label={radio[1]} {...inputProps} />
+          <div className={styles.payment}>
+            <h4 className={styles.paymentTitle}>Payment Method</h4>
+            <div className={styles.paymentMethod}>
+              <RadioBox label={radio[0]} {...inputProps} />
+              <RadioBox label={radio[1]} {...inputProps} />
+            </div>
           </div>
-          <div>
+          <div className={styles.eMoney}>
             {isRadioSelected(radio[0]) && (
               <>
                 <EMoneyNum {...inputProps} />
@@ -137,7 +143,7 @@ const Phone = ({ buyer, handleChange, handleBlur }) => {
 
 const Address = ({ buyer, handleChange, handleBlur }) => {
   return (
-    <div className={styles.checkoutInputContainer}>
+    <div className={classNames(styles.checkoutInputContainer, styles.address)}>
       <label className={styles.checkoutLabel} htmlFor='address'>
         Address
       </label>
@@ -220,6 +226,7 @@ const EMoneyNum = ({ buyer, handleChange, handleBlur }) => {
   return (
     <div
       className={classNames(
+        styles.eMoneyNum,
         styles.checkoutInputContainer,
         buyer.isEMoneyNumValid ? '' : styles.error
       )}
@@ -246,6 +253,7 @@ const EMoneyPin = ({ buyer, handleChange, handleBlur }) => {
   return (
     <div
       className={classNames(
+        styles.eMoneyPin,
         styles.checkoutInputContainer,
         buyer.isEMoneyPinValid ? '' : styles.error
       )}

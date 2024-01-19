@@ -126,3 +126,55 @@
   font-weight: 500;
   letter-spacing: -0.0178em;
 }
+
+@media (min-width: 600px) {
+  .billing {
+    display: grid;
+    grid-template-areas:
+      '. .'
+      '. .';
+    column-gap: 1em;
+  }
+
+  .shipping {
+    display: grid;
+    grid-template-areas:
+      'address address'
+      '. .'
+      '. .';
+    column-gap: 1em;
+  }
+
+  .address {
+    grid-area: address;
+  }
+
+  .payment {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+  }
+
+  .paymentTitle,
+  .paymentMethod {
+    flex: 1;
+  }
+
+  .eMoney {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .eMoneyNum {
+    flex: 1;
+    margin: 0;
+  }
+  .eMoneyPin {
+    flex: 1;
+  }
+}
+
+@media (min-width: 850px) {
+}
