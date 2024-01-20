@@ -8,8 +8,7 @@
   padding: 0 !important;
   width: auto !important;
 }
-.btnTheme:hover,
-.btnTheme:focus {
+.btnTheme:hover {
   color: var(--orange-dark);
   opacity: 1;
 }

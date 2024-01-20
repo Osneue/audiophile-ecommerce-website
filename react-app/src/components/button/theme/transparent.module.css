@@ -3,8 +3,7 @@
   border: 1px solid black;
   color: black;
 }
-.btnTheme:hover,
-.btnTheme:focus {
+.btnTheme:hover {
   background-color: black;
   color: white;
 }

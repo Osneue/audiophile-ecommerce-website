@@ -2,7 +2,6 @@
   background-color: #d87d4a;
   color: #fff;
 }
-.btnTheme:hover,
-.btnTheme:focus {
+.btnTheme:hover {
   background-color: #fbaf85;
 }
