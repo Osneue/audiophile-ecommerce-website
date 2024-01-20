@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Cart from 'src/components/cart'
 import CustomLink from 'src/components/custom-link/CustomLink'
 import Overlay from 'src/components/overlay/overlay'
+import { IconCart, IconHamburger, Logo } from 'src/components/svgs'
 import CategoryShopNav from '../../components/category-shop-nav'
 import { useNavbar } from './navbar-context'
 import './navbar.css'
@@ -37,10 +38,7 @@ const Navbar = () => {
             className='nav-icon nav-hamburger'
             onClick={() => setMenu(!menu)}
           >
-            <img
-              src='./assets/shared/tablet/icon-hamburger.svg'
-              alt='hamburger'
-            />
+            <IconHamburger className='nav-hamburger-svg' />
           </div>
           <div
             className='nav-icon nav-logo'
@@ -49,7 +47,7 @@ const Navbar = () => {
               navigate('/')
             }}
           >
-            <img src='./assets/shared/desktop/logo.svg' alt='logo' />
+            <Logo className='nav-logo-svg' />
           </div>
           <ul>
             <CustomLink to='/'>Home</CustomLink>
@@ -57,8 +55,11 @@ const Navbar = () => {
             <CustomLink to='/speakers'>Speakers</CustomLink>
             <CustomLink to='/earphones'>Earphones</CustomLink>
           </ul>
-          <div className='nav-icon' onClick={() => setIsCartOpen(!isCartOpen)}>
-            <img src='./assets/shared/desktop/icon-cart.svg' alt='cart' />
+          <div
+            className='nav-icon nav-icon-cart-container'
+            onClick={() => setIsCartOpen(!isCartOpen)}
+          >
+            <IconCart className='nav-icon-cart' />
           </div>
           {isCartOpen && <Cart />}
         </div>

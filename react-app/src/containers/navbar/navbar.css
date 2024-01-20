@@ -37,6 +37,28 @@ nav ul {
   display: none;
 }
 
+.nav-hamburger-svg {
+  color: white;
+}
+.nav-hamburger:hover .nav-hamburger-svg {
+  color: var(--orange-dark);
+}
+
+.nav-logo-svg {
+  color: white;
+}
+.nav-logo:hover .nav-logo-svg {
+  color: var(--orange-dark);
+}
+
+.nav-icon-cart {
+  color: white;
+  font-size: 1.5rem;
+}
+.nav-icon-cart-container:hover .nav-icon-cart {
+  color: var(--orange-dark);
+}
+
 @media (min-width: 600px) {
   .nav-logo {
     width: 80%;
