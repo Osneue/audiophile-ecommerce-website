@@ -42,15 +42,17 @@ const Cart = () => {
         <h3>Total</h3>
         <p>{`$ ${showPrice(getTotalPrice())}`}</p>
       </div>
-      <button
-        className={styles.cart__checkout}
-        onClick={() => {
-          closeCart()
-          navigate('/checkout')
-        }}
-      >
-        checkout
-      </button>
+      {!!cart.length && (
+        <button
+          className={styles.cart__checkout}
+          onClick={() => {
+            closeCart()
+            navigate('/checkout')
+          }}
+        >
+          checkout
+        </button>
+      )}
     </div>
   )
 }
