@@ -1,0 +1,129 @@
+.modal {
+  position: absolute;
+  top: 15rem;
+  left: 50%;
+  width: 90%;
+  max-width: 540px;
+  transform: translateX(-50%);
+  z-index: 2;
+  background-color: white;
+  padding: 2em;
+  border-radius: 0.5em;
+}
+
+.iconOrderConf {
+  font-size: 4rem;
+  margin-bottom: 0.5em;
+}
+
+.title {
+  text-align: left;
+
+  color: #000;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.125em; /* 112.5% */
+  letter-spacing: 0.0357em;
+  text-transform: uppercase;
+}
+
+.title:last-of-type {
+  margin-bottom: 0.75em;
+}
+
+.emailConf {
+  color: #000;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.667em; /* 166.667% */
+  opacity: 0.5;
+  margin-bottom: 2.25em;
+  text-align: left;
+}
+
+.content {
+  margin-bottom: 1.5em;
+}
+
+.leftContent {
+  background-color: #f1f1f1;
+  border-radius: 0.5em;
+  flex: 1.25;
+  padding: 0.5em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+
+.otherItems {
+  padding-top: 1em;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: -0.0178em;
+  opacity: 0.5;
+
+  cursor: pointer;
+}
+
+.rightContent {
+  background-color: black;
+  border-radius: 0.5em;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 1em 0;
+  padding-left: 2em;
+}
+
+.rightContent h3 {
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.667em; /* 166.667% */
+  opacity: 0.5;
+  text-align: left;
+}
+.rightContent p {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+@media (min-width: 600px) {
+  .modal {
+    padding: 3em;
+    top: 12rem;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.75em;
+  }
+
+  .leftContent {
+    padding-right: 1.5em;
+  }
+
+  .rightContent {
+    flex: 1;
+
+    justify-content: end;
+    gap: 1em;
+    padding-left: 2em;
+    padding-bottom: 2.5em;
+  }
+}
+
+@media (min-width: 850px) {
+  .modal {
+    top: 6.5rem;
+  }
+}

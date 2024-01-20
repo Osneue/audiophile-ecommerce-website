@@ -161,7 +161,7 @@ const ZX7 = {
 const YX1 = {
   category: PRODUCT_CATEGORY.EARPHONES,
   name: PRODUCT_NAME.YX1,
-  shortName: PRODUCT_NAME.YX1,
+  shortName: 'YX1',
   intro:
     'Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.',
   feature: [

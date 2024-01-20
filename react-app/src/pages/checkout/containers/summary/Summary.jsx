@@ -1,12 +1,15 @@
+import { useEffect } from 'react'
 import Button from 'src/components/button/Button'
 import orangeBtnStyle from 'src/components/button/theme/orange.module.css'
 import CartItem from 'src/components/cart-item'
 import { useCart } from 'src/components/cart/cart-context'
 import { showPrice } from 'src/utility'
+import { useSummary } from './summary-context'
 import styles from './summary.module.css'
 
-const Summary = () => {
+const Summary = ({ setIsModalOpen }) => {
   const { cart, getNum, setNum, getTotalPrice } = useCart()
+  const { setGrandTotal } = useSummary()
   const totalPrice = getTotalPrice()
   const shippingPrice = 50
   const vat = Math.floor(totalPrice * 0.2)
@@ -48,7 +51,13 @@ const Summary = () => {
           )}`}</p>
         </div>
       </div>
-      <Button theme={orangeBtnStyle} onClick={() => {}}>
+      <Button
+        theme={orangeBtnStyle}
+        onClick={() => {
+          setGrandTotal(grandTotal)
+          setIsModalOpen(true)
+        }}
+      >
         CONTINUE & PAY
       </Button>
     </div>
