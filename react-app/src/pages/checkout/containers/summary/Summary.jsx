@@ -1,3 +1,5 @@
+import Button from 'src/components/button/Button'
+import orangeBtnStyle from 'src/components/button/theme/orange.module.css'
 import CartItem from 'src/components/cart-item'
 import { useCart } from 'src/components/cart/cart-context'
 import { showPrice } from 'src/utility'
@@ -46,7 +48,9 @@ const Summary = () => {
           )}`}</p>
         </div>
       </div>
-      <button className={styles.button}>CONTINUE & PAY</button>
+      <Button theme={orangeBtnStyle} onClick={() => {}}>
+        CONTINUE & PAY
+      </Button>
     </div>
   )
 }

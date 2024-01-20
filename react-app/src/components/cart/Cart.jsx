@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom'
+import orangeBtnStyle from 'src/components/button/theme/orange.module.css'
 import { useNavbar } from 'src/containers/navbar/navbar-context'
 import { showPrice } from 'src/utility'
+import Button from '../button/Button'
 import CartItem from '../cart-item/CartItem'
 import { useCart } from './cart-context'
 import styles from './cart.module.css'
@@ -43,15 +45,15 @@ const Cart = () => {
         <p>{`$ ${showPrice(getTotalPrice())}`}</p>
       </div>
       {!!cart.length && (
-        <button
-          className={styles.cart__checkout}
+        <Button
+          theme={orangeBtnStyle}
           onClick={() => {
             closeCart()
             navigate('/checkout')
           }}
         >
           checkout
-        </button>
+        </Button>
       )}
     </div>
   )

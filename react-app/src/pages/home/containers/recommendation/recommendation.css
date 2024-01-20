@@ -76,6 +76,13 @@
   margin-bottom: 1.14em;
 }
 
+.top-recommendation-btn-container,
+.middle-recommendation-btn-container,
+.bottom-recommendation-btn-container {
+  width: 90%;
+  max-width: 10em;
+}
+
 .bottom-recommendation {
   margin-bottom: 4em;
 }

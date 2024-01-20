@@ -1,6 +1,8 @@
 import classNames from 'classnames'
 import { useNavigate } from 'react-router-dom'
 import Advertisement from 'src/components/advertisement/Advertisement'
+import Button from 'src/components/button'
+import goBackStyle from 'src/components/button/theme/go-back.module.css'
 import CategoryShopNav from 'src/components/category-shop-nav/CategoryShopNav'
 import Product from 'src/components/product'
 import ProductStyles from 'src/components/product/product-detail.module.css'
@@ -15,14 +17,14 @@ const GoBack = () => {
 
   return (
     <div className={classNames(css.back, 'container-centre')}>
-      <button
-        className={css.back__button}
+      <Button
+        theme={goBackStyle}
         onClick={() => {
           navigate(-1)
         }}
       >
         Go Back
-      </button>
+      </Button>
     </div>
   )
 }

@@ -1,12 +1,16 @@
 import classNames from 'classnames'
+import { useNavigate } from 'react-router-dom'
 import Button from 'src/components/button'
+import orangeBtnStyle from 'src/components/button/theme/orange.module.css'
 import { showPrice } from 'src/utility'
 import { useCart } from '../cart/cart-context'
 import NumAdjust from '../num-adjust'
 import { useProduct } from './product-context'
-import css from './product-preview.module.css'
+import previewStyle from './product-preview.module.css'
 
-const product = ({ product, isRightPhoto, styles = css }) => {
+const product = ({ product, isRightPhoto, styles = previewStyle }) => {
+  const navigate = useNavigate()
+
   return (
     <div className={classNames(styles.product, 'container-centre')}>
       <div
@@ -33,8 +37,15 @@ const product = ({ product, isRightPhoto, styles = css }) => {
         <p className={classNames(styles.product__text, 'text-style')}>
           {product.intro}
         </p>
-        {styles === css ? (
-          <Button color='orange' to={`/${product.name}`} />
+        {styles === previewStyle ? (
+          <div className={styles.product__buttonContainer}>
+            <Button
+              theme={orangeBtnStyle}
+              onClick={() => navigate(`/${product.name}`)}
+            >
+              See Product
+            </Button>
+          </div>
         ) : (
           <Price styles={styles} target={product} />
         )}
@@ -65,13 +76,11 @@ const Price = ({ styles, target }) => {
           setNum={setProductNum}
           getNum={getProductNum}
         />
-        <button
-          type='button'
-          className={classNames(styles.price__add)}
-          onClick={() => handleAddToCart()}
-        >
-          ADD TO CART
-        </button>
+        <div className={styles.price__btnContainer}>
+          <Button theme={orangeBtnStyle} onClick={() => handleAddToCart()}>
+            ADD TO CART
+          </Button>
+        </div>
       </div>
     </div>
   )

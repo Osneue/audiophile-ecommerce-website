@@ -46,6 +46,11 @@ header p {
   margin-bottom: 1.86em;
 }
 
+.header-info-button-container {
+  width: 90%;
+  max-width: 10em;
+}
+
 @media (min-width: 600px) {
   header {
     background-image: url(./assets/home/tablet/image-header.jpg);

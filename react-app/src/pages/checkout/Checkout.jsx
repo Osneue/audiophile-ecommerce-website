@@ -1,5 +1,7 @@
 import classNames from 'classnames'
 import { useNavigate } from 'react-router-dom'
+import Button from 'src/components/button'
+import goBackStyle from 'src/components/button/theme/go-back.module.css'
 import styles from './checkout.module.css'
 import CheckoutDetail from './containers/checkout-detail'
 import Summary from './containers/summary'
@@ -10,13 +12,14 @@ const Checkout = () => {
   return (
     <div className={classNames(styles.checkout, 'container-centre')}>
       <div className={styles.goBack}>
-        <button
+        <Button
+          theme={goBackStyle}
           onClick={() => {
             navigate(-1)
           }}
         >
           Go Back
-        </button>
+        </Button>
       </div>
       <div className={styles.content}>
         <div className={styles.detail}>

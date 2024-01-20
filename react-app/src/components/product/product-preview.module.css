@@ -15,6 +15,11 @@
   align-items: center;
 }
 
+.product__buttonContainer {
+  width: 90%;
+  max-width: 10em;
+}
+
 @media (min-width: 600px) {
   .product__text {
     padding: 0 4em;

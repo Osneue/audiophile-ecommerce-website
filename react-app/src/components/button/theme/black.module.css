@@ -1,0 +1,8 @@
+.btnTheme {
+  background-color: black;
+  color: #fff;
+}
+.btnTheme:hover,
+.btnTheme:focus {
+  background-color: #4c4c4c;
+}

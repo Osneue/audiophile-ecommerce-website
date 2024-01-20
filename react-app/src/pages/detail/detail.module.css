@@ -5,18 +5,6 @@
   padding: 2em 0;
 }
 
-.back__button {
-  color: #000;
-  font-family: var(font-family);
-  font-size: 0.9375rem;
-  font-weight: 500;
-  line-height: 1.667em; /* 166.667% */
-  opacity: 0.5;
-  border: 0;
-  cursor: pointer;
-  background: none;
-}
-
 .categoryShopNavContainer {
   margin-bottom: 6rem;
 }

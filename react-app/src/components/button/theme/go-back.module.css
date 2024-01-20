@@ -1,0 +1,15 @@
+.btnTheme {
+  color: #000;
+  line-height: 1.667em; /* 166.667% */
+  opacity: 0.5;
+  background: none;
+  font-size: 0.9375rem !important;
+  font-weight: 500 !important;
+  padding: 0 !important;
+  width: auto !important;
+}
+.btnTheme:hover,
+.btnTheme:focus {
+  color: var(--orange-dark);
+  opacity: 1;
+}
