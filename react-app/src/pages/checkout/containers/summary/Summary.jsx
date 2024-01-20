@@ -41,7 +41,9 @@ const Summary = () => {
         </div>
         <div className={styles.fee}>
           <h3>GRAND TOTAL</h3>
-          <p>{`$ ${showPrice(grandTotal)}`}</p>
+          <p className={styles.grandTotalFigure}>{`$ ${showPrice(
+            grandTotal
+          )}`}</p>
         </div>
       </div>
       <button className={styles.button}>CONTINUE & PAY</button>
