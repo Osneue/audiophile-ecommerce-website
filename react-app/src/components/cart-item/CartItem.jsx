@@ -1,4 +1,4 @@
-import { showPrice } from 'src/utility'
+import { showPrice } from 'src/utilities'
 import NumAdjust from '../num-adjust/NumAdjust'
 import styles from './cart-item.module.css'
 import themeCart from './theme-cart.module.css'

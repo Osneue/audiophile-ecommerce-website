@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
-import useWindowScroll from 'src/utilities/useWindowScroll'
-import useWindowWidth from 'src/utilities/useWindowWidth'
+import { useWindowScroll, useWindowWidth } from 'src/utilities'
 
 const useModalScroll = (usrHandle) => {
   const width = useWindowWidth()

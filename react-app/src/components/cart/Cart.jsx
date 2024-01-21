@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import orangeBtnStyle from 'src/components/button/theme/orange.module.css'
 import { useNavbar } from 'src/containers/navbar/navbar-context'
-import { showPrice } from 'src/utility'
+import { showPrice } from 'src/utilities'
 import Button from '../button/Button'
 import CartItem from '../cart-item/CartItem'
 import { useCart } from './cart-context'
