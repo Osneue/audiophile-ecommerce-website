@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const useCheckout = () => {
+const useCheckoutDetail = () => {
   const radio = ['e-Money', 'Cash on Delivery']
   const [selectedRadio, setSelectedRadio] = useState(radio[0])
   const isRadioSelected = (radio) => {
@@ -103,8 +103,29 @@ const useCheckout = () => {
     setBuyer({ ...buyer, [attr]: true })
   }
 
+  const isBuyerValid = () => {
+    if (!buyer.isEmailValid) return false
+    if (!buyer.isZIPCodeValid) return false
+    if (!buyer.isPhoneValid) return false
+    if (!buyer.isEMoneyNumValid) return false
+    if (!buyer.isEMoneyPinValid) return false
+
+    if (!buyer.name.length) return false
+    if (!buyer.email.length) return false
+    if (!buyer.phone.length) return false
+    if (!buyer.address.length) return false
+    if (!buyer.zipCode.length) return false
+    if (!buyer.city.length) return false
+    if (!buyer.country.length) return false
+    if (!buyer.eMoneyNum.length) return false
+    if (!buyer.eMoneyPin.length) return false
+
+    return true
+  }
+
   return {
     buyer,
+    isBuyerValid,
     handleChange,
     handleBlur,
     radio,
@@ -112,4 +133,4 @@ const useCheckout = () => {
     setSelectedRadio,
   }
 }
-export default useCheckout
+export default useCheckoutDetail

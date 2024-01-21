@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import Radio from '../../components/radio/Radio'
+import { useCheckoutDetailContext } from './checkout-detail-context'
 import styles from './checkout-detail.module.css'
-import useCheckout from './useCheckout'
 
 const CheckoutDetail = () => {
   const {
@@ -11,7 +11,7 @@ const CheckoutDetail = () => {
     radio,
     isRadioSelected,
     setSelectedRadio,
-  } = useCheckout()
+  } = useCheckoutDetailContext()
 
   const inputProps = {
     buyer,
