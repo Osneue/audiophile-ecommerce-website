@@ -5,7 +5,7 @@
   width: 90%;
   max-width: 540px;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 11;
   background-color: white;
   padding: 2em;
   border-radius: 0.5em;

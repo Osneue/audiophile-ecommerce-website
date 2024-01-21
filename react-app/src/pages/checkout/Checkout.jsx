@@ -18,7 +18,7 @@ const Checkout = () => {
   return (
     <CheckoutDetailContextProvider>
       <SummaryContextProvider>
-        {isModalOpen && <Overlay />}
+        {isModalOpen && <Overlay overrideNavbar={true} />}
         {isModalOpen && <Modal />}
         <div className={classNames(styles.checkout, 'container-centre')}>
           <div className={styles.goBack}>

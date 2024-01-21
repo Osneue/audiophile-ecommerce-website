@@ -1,6 +1,14 @@
 import './overlay.css'
 
-const Overlay = () => {
-  return <div className='overlay'></div>
+const Overlay = ({ overrideNavbar = false }) => {
+  return (
+    <>
+      {overrideNavbar ? (
+        <div className='overlay' style={{ zIndex: 10 }}></div>
+      ) : (
+        <div className='overlay'></div>
+      )}
+    </>
+  )
 }
 export default Overlay
