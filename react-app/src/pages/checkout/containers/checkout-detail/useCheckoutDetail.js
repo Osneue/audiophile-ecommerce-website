@@ -117,8 +117,11 @@ const useCheckoutDetail = () => {
     if (!buyer.zipCode.length) return false
     if (!buyer.city.length) return false
     if (!buyer.country.length) return false
-    if (!buyer.eMoneyNum.length) return false
-    if (!buyer.eMoneyPin.length) return false
+
+    if (selectedRadio === radio[0]) {
+      if (!buyer.eMoneyNum.length) return false
+      if (!buyer.eMoneyPin.length) return false
+    }
 
     return true
   }
