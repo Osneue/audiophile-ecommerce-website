@@ -8,7 +8,7 @@ import NumAdjust from '../num-adjust'
 import { useProduct } from './product-context'
 import previewStyle from './product-preview.module.css'
 
-const product = ({ product, isRightPhoto, styles = previewStyle }) => {
+const Product = ({ product, isRightPhoto, styles = previewStyle }) => {
   const navigate = useNavigate()
 
   return (
@@ -53,7 +53,7 @@ const product = ({ product, isRightPhoto, styles = previewStyle }) => {
     </div>
   )
 }
-export default product
+export default Product
 
 const Price = ({ styles, target }) => {
   const { getNum: getProductNum, setNum: setProductNum } = useProduct()
