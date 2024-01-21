@@ -5,6 +5,7 @@ import { useCart } from 'src/components/cart/cart-context'
 import CustomLink from 'src/components/custom-link/CustomLink'
 import Overlay from 'src/components/overlay/overlay'
 import { IconCart, IconHamburger, Logo } from 'src/components/svgs'
+import useWindowWidth from 'src/utilities/useWindowWidth'
 import CategoryShopNav from '../../components/category-shop-nav'
 import { useNavbar } from './navbar-context'
 import './navbar.css'
@@ -13,16 +14,13 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false)
   const { isCartOpen, setIsCartOpen, cartRef } = useNavbar()
   const { cart, getTotalNum } = useCart()
+  const width = useWindowWidth()
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 850) {
-        setMenu(false)
-      }
+    if (width >= 850) {
+      setMenu(false)
     }
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  }, [width])
 
   useEffect(() => {
     const cartElement = cartRef.current
