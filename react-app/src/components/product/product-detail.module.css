@@ -71,6 +71,27 @@
   max-width: 10em;
 }
 
+.product__photo {
+  position: relative;
+}
+
+.product_animation {
+  position: absolute;
+  animation: flying-to-cart 1s ease-in-out;
+  z-index: 10;
+}
+
+@keyframes flying-to-cart {
+  50% {
+    transform: translateX(var(--x-offset)) scale(0.2);
+  }
+
+  100% {
+    transform: translateX(var(--x-offset)) translateY(var(--y-offset))
+      scale(0.1);
+  }
+}
+
 @media (min-width: 600px) {
   .product {
     flex-direction: row;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Cart from 'src/components/cart'
 import CustomLink from 'src/components/custom-link/CustomLink'
@@ -10,7 +10,7 @@ import './navbar.css'
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false)
-  const { isCartOpen, setIsCartOpen } = useNavbar()
+  const { isCartOpen, setIsCartOpen, cartRef } = useNavbar()
 
   useEffect(() => {
     const handleResize = () => {
@@ -56,6 +56,7 @@ const Navbar = () => {
             <CustomLink to='/earphones'>Earphones</CustomLink>
           </ul>
           <div
+            ref={cartRef}
             className='nav-icon nav-icon-cart-container'
             onClick={() => setIsCartOpen(!isCartOpen)}
           >
