@@ -75,19 +75,19 @@ const Price = ({ styles, target, productPhoto, productPhotoImg }) => {
   const { cartRef } = useNavbar()
 
   const flyToCart = () => {
-    const img = productPhotoImg.current.cloneNode()
+    const imgElement = productPhotoImg.current.cloneNode()
     const container = productPhoto.current
-    const cart = cartRef.current
+    const cartElement = cartRef.current
 
-    img.classList.add(styles.product_animation)
-    container.appendChild(img)
+    imgElement.classList.add(styles.product_animation)
+    container.appendChild(imgElement)
 
     const getCentre = (pos) => {
       return { x: (pos.left + pos.right) / 2, y: (pos.top + pos.bottom) / 2 }
     }
 
-    const cartPos = cart.getBoundingClientRect()
-    const imgPos = img.getBoundingClientRect()
+    const cartPos = cartElement.getBoundingClientRect()
+    const imgPos = imgElement.getBoundingClientRect()
 
     const cartCentre = getCentre(cartPos)
     const imgCentre = getCentre(imgPos)
@@ -95,11 +95,11 @@ const Price = ({ styles, target, productPhoto, productPhotoImg }) => {
     const xOffset = cartCentre.x - imgCentre.x
     const yOffset = cartCentre.y - imgCentre.y
 
-    img.style.setProperty('--x-offset', `${xOffset.toFixed(2)}px`)
-    img.style.setProperty('--y-offset', `${yOffset.toFixed(2)}px`)
+    imgElement.style.setProperty('--x-offset', `${xOffset.toFixed(2)}px`)
+    imgElement.style.setProperty('--y-offset', `${yOffset.toFixed(2)}px`)
 
     setTimeout(() => {
-      container.removeChild(img)
+      container.removeChild(imgElement)
     }, 1000)
   }
 

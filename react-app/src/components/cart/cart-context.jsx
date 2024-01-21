@@ -44,7 +44,15 @@ export const useCart = () => {
     return amount
   }
 
-  return { cart, getNum, setNum, clearNum, addNum, getTotalPrice }
+  const getTotalNum = () => {
+    let num = 0
+    cart.forEach((item) => {
+      num += Number(item.num)
+    })
+    return num
+  }
+
+  return { cart, getNum, setNum, clearNum, addNum, getTotalNum, getTotalPrice }
 }
 
 export const CartContextProvider = ({ children }) => {

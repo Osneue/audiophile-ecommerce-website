@@ -59,6 +59,27 @@ nav ul {
   color: var(--orange-dark);
 }
 
+.nav-icon-cart-container {
+  position: relative;
+}
+.nav-icon-cart-container::before {
+  position: absolute;
+  top: -0.75rem;
+  left: 1.25rem;
+  content: attr(cart-items);
+  color: white;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  border-radius: 50%;
+  background-color: red;
+  text-align: center;
+  font-weight: 700;
+}
+.nav-icon-cart-container.empty::before {
+  content: unset;
+}
+
 @media (min-width: 600px) {
   .nav-logo {
     width: 80%;
