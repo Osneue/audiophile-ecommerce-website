@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   padding: 3.44em 1.5em;
-  background-image: url(./assets/home/desktop/pattern-circles.svg);
+  background-image: url(/assets/home/desktop/pattern-circles.svg);
   background-repeat: no-repeat;
   background-size: 40em;
   background-position: center top -10em;
@@ -38,14 +38,14 @@
 .top-recommendation-circle {
   width: 100%;
   height: 12.93rem;
-  background-image: url(./assets/home/desktop/pattern-circles.svg);
+  background-image: url(/assets/home/desktop/pattern-circles.svg);
   background-size: 100%;
 }
 
 .top-recommendation-photo {
   width: 10.75rem;
   height: 12.93rem;
-  background-image: url(./assets/home/mobile/image-speaker-zx9.png);
+  background-image: url(/assets/home/mobile/image-speaker-zx9.png);
   background-size: cover;
   margin-bottom: 2em;
 }
@@ -61,7 +61,7 @@
   padding: 6em 0;
   padding-left: 1.5em;
   border-radius: 0.5em;
-  background-image: url(./assets/figma/home/mobile/001.png);
+  background-image: url(/assets/figma/home/mobile/001.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -89,7 +89,7 @@
 
 .bottom-recommendation-photo {
   padding: 6.25em 0;
-  background-image: url(./assets/figma/home/mobile/002.png);
+  background-image: url(/assets/figma/home/mobile/002.png);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0.5em;
@@ -119,7 +119,7 @@
     margin-bottom: 4em;
     width: 12em;
     height: 14.8em;
-    background-image: url(./assets/home/tablet/image-speaker-zx9.png);
+    background-image: url(/assets/home/tablet/image-speaker-zx9.png);
   }
 
   .top-recommendation-info {
@@ -133,13 +133,13 @@
   .middle-recommendation {
     padding: 6.875em 0;
     padding-left: 3.875em;
-    background-image: url(./assets/figma/home/tablet/001.png);
+    background-image: url(/assets/figma/home/tablet/001.png);
   }
 
   .bottom-recommendation {
     display: flex;
     justify-content: space-between;
-    background-image: url(./assets/figma/home/table/002.png);
+    background-image: url(/assets/figma/home/table/002.png);
   }
 
   .bottom-recommendation-photo {
@@ -169,7 +169,7 @@
   }
 
   .top-recommendation-photo {
-    background-image: url(./assets/home/desktop/image-speaker-zx9.png);
+    background-image: url(/assets/home/desktop/image-speaker-zx9.png);
     margin-bottom: 0;
     width: 37%;
     padding: 22% 0;

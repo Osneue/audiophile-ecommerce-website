@@ -5,15 +5,15 @@ const Advertisement = () => {
     <div className='ad-container'>
       <div className='ad-image'>
         <img
-          src='./assets/shared/mobile/image-best-gear.jpg'
+          src='/assets/shared/mobile/image-best-gear.jpg'
           alt='listening music'
         />
         <img
-          src='./assets/shared/tablet/image-best-gear.jpg'
+          src='/assets/shared/tablet/image-best-gear.jpg'
           alt='listening music'
         />
         <img
-          src='./assets/shared/desktop/image-best-gear.jpg'
+          src='/assets/shared/desktop/image-best-gear.jpg'
           alt='listening music'
         />
       </div>

@@ -7,7 +7,7 @@ const Footer = () => {
     <footer>
       <div className='footer-content-container'>
         <div className='footer-logo'>
-          <img src='./assets/shared/desktop/logo.svg' alt='' />
+          <img src='/assets/shared/desktop/logo.svg' alt='' />
         </div>
         <ul className='footer-list'>
           <CustomLink to='/'>Home</CustomLink>

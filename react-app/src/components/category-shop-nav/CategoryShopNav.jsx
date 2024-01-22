@@ -35,17 +35,17 @@ const CategoryShopNav = ({ setMenu }) => {
     <div className='category-shop-nav-container'>
       <CategoryShopNavItem
         name='Headphones'
-        photo='./assets/shared/desktop/image-category-thumbnail-headphones.png'
+        photo='/assets/shared/desktop/image-category-thumbnail-headphones.png'
         setMenu={setMenu}
       />
       <CategoryShopNavItem
         name='Speakers'
-        photo='./assets/shared/desktop/image-category-thumbnail-speakers.png'
+        photo='/assets/shared/desktop/image-category-thumbnail-speakers.png'
         setMenu={setMenu}
       />
       <CategoryShopNavItem
         name='Earphones'
-        photo='./assets/shared/desktop/image-category-thumbnail-earphones.png'
+        photo='/assets/shared/desktop/image-category-thumbnail-earphones.png'
         setMenu={setMenu}
       />
     </div>
