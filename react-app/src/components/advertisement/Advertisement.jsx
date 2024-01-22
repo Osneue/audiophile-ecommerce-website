@@ -1,21 +1,15 @@
+import gearDesktop from 'src/assets/shared/desktop/image-best-gear.jpg'
+import gearMobile from 'src/assets/shared/mobile/image-best-gear.jpg'
+import gearTablet from 'src/assets/shared/tablet/image-best-gear.jpg'
 import './advertisement.css'
 
 const Advertisement = () => {
   return (
     <div className='ad-container'>
       <div className='ad-image'>
-        <img
-          src='/assets/shared/mobile/image-best-gear.jpg'
-          alt='listening music'
-        />
-        <img
-          src='/assets/shared/tablet/image-best-gear.jpg'
-          alt='listening music'
-        />
-        <img
-          src='/assets/shared/desktop/image-best-gear.jpg'
-          alt='listening music'
-        />
+        <img src={gearMobile} alt='listening music' />
+        <img src={gearTablet} alt='listening music' />
+        <img src={gearDesktop} alt='listening music' />
       </div>
       <div className='ad-content'>
         <h2>

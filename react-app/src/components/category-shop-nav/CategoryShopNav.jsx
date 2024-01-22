@@ -1,4 +1,7 @@
 import { useNavigate } from 'react-router-dom'
+import earphones from 'src/assets/shared/desktop/image-category-thumbnail-earphones.png'
+import headphones from 'src/assets/shared/desktop/image-category-thumbnail-headphones.png'
+import speakers from 'src/assets/shared/desktop/image-category-thumbnail-speakers.png'
 import { IconArrowRight } from '../svgs'
 import './category-shop-nav.css'
 
@@ -35,17 +38,13 @@ const CategoryShopNav = ({ setMenu }) => {
     <div className='category-shop-nav-container'>
       <CategoryShopNavItem
         name='Headphones'
-        photo='/assets/shared/desktop/image-category-thumbnail-headphones.png'
+        photo={headphones}
         setMenu={setMenu}
       />
-      <CategoryShopNavItem
-        name='Speakers'
-        photo='/assets/shared/desktop/image-category-thumbnail-speakers.png'
-        setMenu={setMenu}
-      />
+      <CategoryShopNavItem name='Speakers' photo={speakers} setMenu={setMenu} />
       <CategoryShopNavItem
         name='Earphones'
-        photo='/assets/shared/desktop/image-category-thumbnail-earphones.png'
+        photo={earphones}
         setMenu={setMenu}
       />
     </div>

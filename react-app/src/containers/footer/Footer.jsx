@@ -1,3 +1,4 @@
+import logo from 'src/assets/shared/desktop/logo.svg'
 import CustomLink from 'src/components/custom-link/CustomLink'
 import { IconFacebook, IconInstagram, IconTwitter } from '../../components/svgs'
 import './footer.css'
@@ -7,7 +8,7 @@ const Footer = () => {
     <footer>
       <div className='footer-content-container'>
         <div className='footer-logo'>
-          <img src='/assets/shared/desktop/logo.svg' alt='' />
+          <img src={logo} alt='' />
         </div>
         <ul className='footer-list'>
           <CustomLink to='/'>Home</CustomLink>
